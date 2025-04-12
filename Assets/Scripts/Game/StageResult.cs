@@ -19,10 +19,17 @@ namespace ZeroStats.Game
             resultText.text = G.Localize(card.ResultDescription);
             animation.clip = showAnimation;
             animation.Play();
-            await UniTask.Delay(delay + showAnimation.Milliseconds());
+            await UniTask.Delay(showAnimation.Milliseconds());
+
+            await UniTask.WhenAny(UniTask.Delay(delay), UniTask.WaitUntil(() => Input.GetMouseButtonDown(0)));
             animation.clip = hideAnimation;
             animation.Play();
-            await UniTask.Delay(delay + hideAnimation.Milliseconds());
+            await UniTask.Delay(hideAnimation.Milliseconds());
+            gameObject.SetActive(false);
+        }
+
+        public void Hide()
+        {
             gameObject.SetActive(false);
         }
     }

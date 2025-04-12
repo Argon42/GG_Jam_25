@@ -1,0 +1,22 @@
+{
+    "name": "com.bananva.zerostats",
+    "rootNamespace": "ZeroStats",
+    "references": [
+        "com.bananva.utilities",
+        "com.bananva.loading-service",
+        "com.bananva.ui.dispatching",
+        "Unity.TextMeshPro",
+        "R3.Unity",
+        "UniTask",
+        "Zenject"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

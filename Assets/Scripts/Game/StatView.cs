@@ -3,6 +3,7 @@ using DG.Tweening;
 using R3;
 using UnityEngine;
 using UnityEngine.UI;
+using ZeroStats.Common;
 using Random = UnityEngine.Random;
 
 namespace ZeroStats.Game

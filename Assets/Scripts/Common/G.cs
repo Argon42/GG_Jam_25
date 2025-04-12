@@ -1,10 +1,14 @@
 ﻿using System;
 using UnityEngine;
+using ZeroStats.Game;
 
-namespace ZeroStats.Game
+namespace ZeroStats.Common
 {
     public static class G
     {
+        private static GameConfig? _config;
+        public static IGameConfig Config => _config ??= Resources.Load<GameConfig>("Config");
+
         public static Sprite LoadSprite(string path) => Resources.Load<Sprite>(path);
         public static string Localize(string key) => key;
 

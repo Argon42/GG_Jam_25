@@ -108,20 +108,26 @@ namespace ZeroStats.Game
             {
                 if (row.c.Length < 10)
                     throw new InvalidOperationException("not enough columns. expected 9, got " + row.c.Length);
-                var card = new Card
+                try
                 {
-                    Id = ParseInt(row.c[0].v),
-                    IconPath = row.c[1].v ?? string.Empty,
-                    Name = row.c[2].v ?? string.Empty,
-                    ResultDescription = row.c[3].v ?? string.Empty,
-                    ResultResourcesPath = row.c[4].v,
-                    Stat1Delta = ParseInt(row.c[5].v),
-                    Stat2Delta = ParseInt(row.c[6].v),
-                    Stat3Delta = ParseInt(row.c[7].v),
-                    Stat4Delta = ParseInt(row.c[8].v),
-                    Group = ParseInt(row.c[9].v),
-                };
-                list.Add(card);
+                    var card = new Card();
+                    card.Id = ParseInt(row.c[0].v);
+                    card.IconPath = row.c[1].v ?? string.Empty;
+                    card.Name = row.c[2].v ?? string.Empty;
+                    card.ResultDescription = row.c[3].v ?? string.Empty;
+                    card.ResultResourcesPath = row.c[4].v;
+                    card.Stat1Delta = ParseInt(row.c[5].v);
+                    card.Stat2Delta = ParseInt(row.c[6].v);
+                    card.Stat3Delta = ParseInt(row.c[7].v);
+                    card.Stat4Delta = ParseInt(row.c[8].v);
+                    card.Group = ParseInt(row.c[9].v);
+                    list.Add(card);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e + "\nid: " + row.c[0].v);
+                    throw;
+                }
             }
 
             return list.ToArray();
@@ -153,7 +159,8 @@ namespace ZeroStats.Game
 
         private static int ParseInt(string? stringNumber)
         {
-            return (int)double.Parse(stringNumber ?? "0", NumberStyles.Any, NumberFormatInfo.InvariantInfo);
+            return (int)double.Parse(string.IsNullOrEmpty(stringNumber) ? "0" : stringNumber, NumberStyles.Any,
+                NumberFormatInfo.InvariantInfo);
         }
     }
 }

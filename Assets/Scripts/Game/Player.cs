@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using R3;
 using UnityEngine;
+using ZeroStats.Common;
 
 namespace ZeroStats.Game
 {
@@ -10,8 +11,6 @@ namespace ZeroStats.Game
     {
         public const int MaxStatValueAbs = 20;
         private const int HandSizeDefault = 2;
-
-        [SerializeField] private CardsConfig cardsConfig = default!;
 
         public readonly ReactiveProperty<GameStage> Stage = new(GameStage.None);
         public readonly ReactiveProperty<int> Day = new(0);
@@ -91,8 +90,9 @@ namespace ZeroStats.Game
 
         private IEnumerable<Card> GenerateCardsForStage(StageState stageState, int neededCards)
         {
+            IGameConfig gameConfig = G.Config;
             var result = new List<Card>();
-            var cards = cardsConfig.Descriptors
+            var cards = gameConfig.Descriptors
                 .Where(descriptor => !descriptor.NotApplicableStages.Contains(stageState.Current))
                 .Where(descriptor => descriptor.StatNumber switch
                 {
@@ -106,11 +106,11 @@ namespace ZeroStats.Game
 
             for (int i = 0; i < neededCards; i++)
             {
-                var card = cardsConfig.GetCard(GetCard(cards));
+                var card = gameConfig.GetCard(GetCard(cards));
                 result.Add(card);
                 cards.RemoveAll(descriptor => result.Any(cardInResults =>
                 {
-                    var cardFromDes = cardsConfig.GetCard(descriptor.CardId);
+                    var cardFromDes = gameConfig.GetCard(descriptor.CardId);
                     return cardInResults.Id == descriptor.CardId
                            || (cardInResults.Group == cardFromDes.Group && cardFromDes.Group != 0);
                 }));

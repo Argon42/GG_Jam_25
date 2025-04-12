@@ -5,8 +5,8 @@ using UnityEngine;
 
 namespace ZeroStats.Game
 {
-    [CreateAssetMenu(fileName = "CardsConfig", menuName = "ZeroStats/CardsConfig")]
-    public class CardsConfig : ScriptableObject
+    [CreateAssetMenu(fileName = "GameConfig", menuName = "ZeroStats/CardsConfig")]
+    public class GameConfig : ScriptableObject, IGameConfig
     {
         [SerializeField] private GoogleSheetLoader.CardDatabase database = default!;
 

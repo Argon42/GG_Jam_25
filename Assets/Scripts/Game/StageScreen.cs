@@ -21,5 +21,10 @@ namespace ZeroStats.Game
             cardsHand.RemoveCards();
             return stageResult.ShowResult(card);
         }
+
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

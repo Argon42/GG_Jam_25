@@ -679,3 +679,21 @@ MonoBehaviour:
       StatNumber: -1
       MinStatForUse: -20
       MaxStatForUse: 20
+    colors:
+    - name: NameColor
+      color: {r: 1, g: 1, b: 1, a: 1}
+    - name: ColorsBars/First
+      color: {r: 1, g: 0, b: 0, a: 1}
+    - name: ColorsBars/Second
+      color: {r: 0, g: 1, b: 0, a: 1}
+    - name: ColorsBars/Third
+      color: {r: 0, g: 0, b: 1, a: 1}
+    - name: ColorsBars/Fourth
+      color: {r: 1, g: 0, b: 1, a: 1}
+    parameters:
+      keys:
+      - MaxStatValue
+      - HandSizeDefault
+      values:
+      - 20.000000
+      - 2.000000

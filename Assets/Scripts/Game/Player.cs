@@ -34,7 +34,10 @@ namespace ZeroStats.Game
 
         public StageState GetNextStage()
         {
-            return _stages.Count > 0 ? _stages.Dequeue() : CreateNewStage(Day.Value, Stage.Value);
+            var stageState = _stages.Count > 0 ? _stages.Dequeue() : CreateNewStage(Day.Value, Stage.Value);
+            Day.Value = stageState.Day;
+            Stage.Value = stageState.Current;
+            return stageState;
         }
 
         private static StageState CreateNewStage(int dayValue, GameStage stageValue)

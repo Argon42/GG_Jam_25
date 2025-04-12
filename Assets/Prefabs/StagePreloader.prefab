@@ -128,6 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLabel: {fileID: 8011696276384282413}
+  showAnimation: {fileID: 7400000, guid: 75edb0858a6d23e40a391b93e79c81ed, type: 2}
+  hideAnimation: {fileID: 7400000, guid: 75edb0858a6d23e40a391b93e79c81ed, type: 2}
   animation: {fileID: 2807063313946171424}
   delayOfClose: 1000
   delayOfOpen: 1000
@@ -143,7 +145,7 @@ Animation:
   m_Animation: {fileID: 0}
   m_Animations: []
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0

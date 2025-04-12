@@ -1,12 +1,15 @@
-﻿namespace ZeroStats.Game
+﻿using System;
+
+namespace ZeroStats.Game
 {
+    [Serializable]
     public class CardDescriptor
     {
-        public Card Card { get; }
-        public int Weight { get; }
-        public GameStage[] NotApplicableStages { get; }
-        public int StatNumber { get; }
-        public int MinStatForUse { get; }
-        public int MaxStatForUse { get; }
+        public int CardId;
+        public int Weight;
+        public GameStage[] NotApplicableStages;
+        public int StatNumber;
+        public int MinStatForUse;
+        public int MaxStatForUse;
     }
 }

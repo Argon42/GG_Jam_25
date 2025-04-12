@@ -1,15 +1,20 @@
-﻿namespace ZeroStats.Game
+﻿using System;
+
+namespace ZeroStats.Game
 {
+    
+    [Serializable]
     public class Card
     {
-        public int Id { get; set; }
-        public string Icon { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public int Id;
+        public string IconPath;
+        public string Name;
+        public string ResultDescription;
+        public string? ResultResourcesPath;
 
-        public int Stat1Delta { get; set; }
-        public int Stat2Delta { get; set; }
-        public int Stat3Delta { get; set; }
-        public int Stat4Delta { get; set; }
+        public int Stat1Delta;
+        public int Stat2Delta;
+        public int Stat3Delta;
+        public int Stat4Delta;
     }
 }

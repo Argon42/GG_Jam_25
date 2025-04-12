@@ -10,7 +10,6 @@ namespace ZeroStats.Game
         public List<Card> AdditionalCards { get; } = new();
         public int HandSize { get; set; }
 
-
         public StageState(GameStage current, int dayValue, int handSize, HashSet<StageModificator> appliedModificators)
         {
             Current = current;

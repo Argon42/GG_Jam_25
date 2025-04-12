@@ -88,7 +88,7 @@ namespace ZeroStats.Game
 
         private IEnumerable<Card> GenerateCardsForStage(StageState stageState, int neededCards)
         {
-            var result = new List<Card>();
+            var result = new List<int>();
             var cards = cardsConfig.Descriptors
                 .Where(descriptor => !descriptor.NotApplicableStages.Contains(stageState.Current))
                 .Where(descriptor => descriptor.StatNumber switch
@@ -97,20 +97,20 @@ namespace ZeroStats.Game
                     2 => descriptor.MinStatForUse <= Stat2.Value && descriptor.MaxStatForUse >= Stat2.Value,
                     3 => descriptor.MinStatForUse <= Stat3.Value && descriptor.MaxStatForUse >= Stat3.Value,
                     4 => descriptor.MinStatForUse <= Stat4.Value && descriptor.MaxStatForUse >= Stat4.Value,
-                    _ => false,
+                    _ => true,
                 })
                 .ToList();
 
             for (int i = 0; i < neededCards; i++)
             {
                 result.Add(GetCard(cards));
-                cards.RemoveAll(descriptor => result.Any(card => card.Id == descriptor.Card.Id));
+                cards.RemoveAll(descriptor => result.Any(cardId => cardId == descriptor.CardId));
             }
 
-            return result;
+            return result.Select(id => cardsConfig.GetCard(id)).ToList();
         }
 
-        private Card GetCard(List<CardDescriptor> cards)
+        private int GetCard(List<CardDescriptor> cards)
         {
             if (cards.Count == 0)
                 throw new InvalidOperationException("No cards left to select from.");
@@ -123,10 +123,10 @@ namespace ZeroStats.Game
             {
                 cumulative += cardDescriptor.Weight;
                 if (randomValue < cumulative)
-                    return cardDescriptor.Card;
+                    return cardDescriptor.CardId;
             }
 
-            return cards[0].Card;
+            return cards[0].CardId;
         }
 
         public bool IsLoose() =>

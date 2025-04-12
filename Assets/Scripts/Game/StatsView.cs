@@ -1,6 +1,4 @@
-﻿using System;
-using R3;
-using TMPro;
+﻿using R3;
 using UnityEngine;
 
 namespace ZeroStats.Game
@@ -8,17 +6,21 @@ namespace ZeroStats.Game
     public class StatsView : MonoBehaviour
     {
         [SerializeField] private Player player = default!;
-        [SerializeField] private TMP_Text stat1 = default!;
-        [SerializeField] private TMP_Text stat2 = default!;
-        [SerializeField] private TMP_Text stat3 = default!;
-        [SerializeField] private TMP_Text stat4 = default!;
+        [SerializeField] private StatView statViewPrefab = default!;
+        [SerializeField] private RectTransform statsContainer = default!;
 
         private void Awake()
         {
-            player.Stat1.Subscribe(i => stat1.text = i.ToString()).AddTo(this);
-            player.Stat2.Subscribe(i => stat2.text = i.ToString()).AddTo(this);
-            player.Stat3.Subscribe(i => stat3.text = i.ToString()).AddTo(this);
-            player.Stat4.Subscribe(i => stat4.text = i.ToString()).AddTo(this);
+            CreateStat(player.Stat1, StatType.First, Player.MaxStatValueAbs);
+            CreateStat(player.Stat2, StatType.Second, Player.MaxStatValueAbs);
+            CreateStat(player.Stat3, StatType.Third, Player.MaxStatValueAbs);
+            CreateStat(player.Stat4, StatType.Fourth, Player.MaxStatValueAbs);
+        }
+
+        private void CreateStat(ReadOnlyReactiveProperty<int> stat, StatType type, int maxValue)
+        {
+            var statView = Instantiate(statViewPrefab, statsContainer);
+            statView.SetStat(stat, maxValue, type);
         }
     }
 }

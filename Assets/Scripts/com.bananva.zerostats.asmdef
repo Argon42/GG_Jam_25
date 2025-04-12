@@ -8,7 +8,9 @@
         "Unity.TextMeshPro",
         "R3.Unity",
         "UniTask",
-        "Zenject"
+        "Zenject",
+        "DOTween.Modules",
+        "UniTask.DOTween"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

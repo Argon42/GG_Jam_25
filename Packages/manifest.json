@@ -14,9 +14,9 @@
     }
   ],
   "dependencies": {
-    "com.bananva.ui.dispatching": "https://github.com/Argon42/SpaceStellar.git?path=/Packages/com.bananva.ui.dispatchiring#4b611bd50ad0ff4156941223f8e50887979a68d2",
+    "com.bananva.ui.dispatching": "https://github.com/Argon42/SpaceStellar.git?path=/Packages/com.bananva.ui.dispatchiring#41b920f7516e78c378e6e271716f6e7d2529efaf",
     "com.banava.loading-service": "https://github.com/Argon42/SpaceStellar.git?path=/Packages/com.banava.loading-service#4b611bd50ad0ff4156941223f8e50887979a68d2",
-    "com.banava.utilities": "https://github.com/Argon42/SpaceStellar.git?path=/Packages/com.banava.utilities#4b611bd50ad0ff4156941223f8e50887979a68d2",
+    "com.banava.utilities": "https://github.com/Argon42/SpaceStellar.git?path=/Packages/com.banava.utilities#41b920f7516e78c378e6e271716f6e7d2529efaf",
     "com.cysharp.r3": "1.3.0",
     "com.cysharp.unitask": "2.5.10",
     "com.github-glitchenzo.nugetforunity": "4.3.0",

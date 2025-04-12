@@ -8,9 +8,10 @@ namespace ZeroStats.Game
     public class CardView : MonoBehaviour
     {
         [SerializeField] private Image image = default!;
-        [SerializeField] private TextMeshProUGUI text = default!;
+        [SerializeField] private TMP_Text text = default!;
         [SerializeField] private Button button = default!;
-
+        [SerializeField] private DeltaEffectView deltaEffectViewPrefab = default!;
+        [SerializeField] private RectTransform deltaEffectContainer = default!;
 
         public void Show(Card card, Func<Vector2> position, Action onSelect)
         {

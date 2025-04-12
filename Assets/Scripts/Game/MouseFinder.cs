@@ -28,14 +28,14 @@ namespace ZeroStats.Game
 
         private void AlignHandToPoint(HandView hand, Vector3 worldTarget)
         {
-            Vector3 worldA = hand.PointTransform.position;
-            Vector3 worldC = hand.EndTransform.position;
+            var dir = (worldTarget - hand.PointTransform.position).normalized;
+            var dirHand = (hand.EndTransform.position - hand.PointTransform.position).normalized;
+            
+            Debug.DrawRay(hand.PointTransform.position, dir * 1000, Color.green);
+            Debug.DrawRay(hand.PointTransform.position, dirHand * 1000, Color.red);
 
-            Vector2 dirAC = (worldC - worldA).normalized;
-            Vector2 dirAB = (worldTarget - worldA).normalized;
-
-            float angle = Vector2.SignedAngle(dirAC, dirAB);
-            hand.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            float angle = -Vector2.SignedAngle(dir, dirHand);
+            hand.transform.rotation = Quaternion.AngleAxis(hand.transform.eulerAngles.z + angle, Vector3.forward);
         }
 
         public static Vector3 GetLocalMousePosition(RectTransform rectTransform)

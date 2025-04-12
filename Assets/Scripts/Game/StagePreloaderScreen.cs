@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
+using ZeroStats.Common;
 
 namespace ZeroStats.Game
 {

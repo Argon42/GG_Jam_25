@@ -39,6 +39,7 @@ namespace ZeroStats.Game
             await stageScreen.ApplyEffect(selectedCard);
             if (player.IsLoose())
             {
+                stageScreen.Hide();
                 backgroundWorld.Show(GameStage.Result);
                 resultScreen.Show(OnRestart);
                 return;

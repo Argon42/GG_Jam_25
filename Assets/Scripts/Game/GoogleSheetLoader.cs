@@ -17,6 +17,8 @@ namespace ZeroStats.Game
         {
             public Card[] cards = default!;
             public CardDescriptor[] cardDescriptors = default!;
+            public ColorData[] colors = default!;
+            public ParametersData parameters = default!;
         }
 
         // Вспомогательные классы для парсинга JSON от Google Sheets (формат gviz)
@@ -51,24 +53,56 @@ namespace ZeroStats.Game
             public string? v;
         }
 
-        public async UniTask<CardDatabase> Start()
+        public async UniTask<CardDatabase> LoadAllData() => new()
         {
-            Card[]? cards = null;
-            CardDescriptor[]? cardDescriptors = null;
+            cards = await FetchData("Cards", ParseCard),
+            cardDescriptors = await FetchData("CardDescriptors", ParseDescription),
+            colors = await FetchData("Colors", ParseColor),
+            parameters = new ParametersData(
+                (await FetchData("Parameters", ParseParameters)).ToDictionary(tuple => tuple.Item1,
+                    tuple => tuple.Item2)
+            ),
+        };
 
-            // Загрузка листа Cards
-            await FetchSheetData("Cards", resp => { cards = ParseCards(resp); });
+        private static Card ParseCard(string?[] cells) => new()
+        {
+            Id = ParseInt(cells[0]),
+            IconPath = cells[1] ?? string.Empty,
+            Name = cells[2] ?? string.Empty,
+            ResultDescription = cells[3] ?? string.Empty,
+            ResultResourcesPath = cells[4],
+            Stat1Delta = ParseInt(cells[5]),
+            Stat2Delta = ParseInt(cells[6]),
+            Stat3Delta = ParseInt(cells[7]),
+            Stat4Delta = ParseInt(cells[8]),
+            Group = ParseInt(cells[9]),
+        };
 
-            // Загрузка листа CardDescriptors
-            await FetchSheetData("CardDescriptors", resp => { cardDescriptors = ParseCardDescriptors(resp); });
+        private static CardDescriptor ParseDescription(string?[] cells) => new()
+        {
+            CardId = ParseInt(cells[0]),
+            Weight = ParseInt(cells[1]),
+            NotApplicableStages = cells[2]?.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(ParseInt).Cast<GameStage>().ToArray() ?? Array.Empty<GameStage>(),
+            StatNumber = ParseInt(cells[3]),
+            MinStatForUse = ParseInt(cells[4]),
+            MaxStatForUse = ParseInt(cells[5]),
+        };
 
-            // Формируем итоговую базу
-            return new CardDatabase
-            {
-                cards = cards ?? throw new InvalidOperationException("data cards not loaded"),
-                cardDescriptors = cardDescriptors ??
-                                  throw new InvalidOperationException("data cardDescriptors not loaded"),
-            };
+        private (string, string) ParseParameters(string?[] arg) => (arg[0] ?? string.Empty, arg[1] ?? string.Empty);
+
+
+        private ColorData ParseColor(string?[] arg) => new()
+        {
+            name = arg[0] ?? string.Empty,
+            color = ColorUtility.TryParseHtmlString(arg[1], out var color) ? color : Color.white,
+        };
+
+        private async UniTask<T[]> FetchData<T>(string sheetName, Func<string?[], T> parseItem)
+        {
+            T[] result = default!;
+            await FetchSheetData(sheetName, resp => { result = ParseGeneric(resp, parseItem).ToArray(); });
+            return result ?? throw new InvalidOperationException("data not loaded");
         }
 
         private async UniTask FetchSheetData(string sheetName, Action<GvizResponse> onSuccess)
@@ -101,59 +135,26 @@ namespace ZeroStats.Game
             }
         }
 
-        private Card[] ParseCards(GvizResponse response)
-        {
-            var list = new List<Card>();
-            foreach (var row in response.table.rows)
-            {
-                if (row.c.Length < 10)
-                    throw new InvalidOperationException("not enough columns. expected 9, got " + row.c.Length);
-                var card = new Card
+        private IEnumerable<T> ParseGeneric<T>(GvizResponse response, Func<string?[], T> parseItem) =>
+            response.table.rows
+                .Select(row => row.c)
+                .Select(cells =>
                 {
-                    Id = ParseInt(row.c[0].v),
-                    IconPath = row.c[1].v ?? string.Empty,
-                    Name = row.c[2].v ?? string.Empty,
-                    ResultDescription = row.c[3].v ?? string.Empty,
-                    ResultResourcesPath = row.c[4].v,
-                    Stat1Delta = ParseInt(row.c[5].v),
-                    Stat2Delta = ParseInt(row.c[6].v),
-                    Stat3Delta = ParseInt(row.c[7].v),
-                    Stat4Delta = ParseInt(row.c[8].v),
-                    Group = ParseInt(row.c[9].v),
-                };
-                list.Add(card);
-            }
+                    try
+                    {
+                        return parseItem(cells.Select(cell => cell.v).ToArray());
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e + "\n " + string.Join("|", cells.Select(c => c.v)));
+                        throw;
+                    }
+                });
 
-            return list.ToArray();
-        }
+        public static int ParseInt(string? stringNumber) => (int)ParseDouble(stringNumber);
 
-        private CardDescriptor[] ParseCardDescriptors(GvizResponse response)
-        {
-            var list = new List<CardDescriptor>();
-            foreach (var row in response.table.rows)
-            {
-                if (row.c.Length < 6)
-                    throw new InvalidOperationException("not enough columns. expected 6, got " + row.c.Length);
-
-                var cd = new CardDescriptor
-                {
-                    CardId = ParseInt(row.c[0].v),
-                    Weight = ParseInt(row.c[1].v),
-                    NotApplicableStages = row.c[2].v?.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(ParseInt).Cast<GameStage>().ToArray() ?? Array.Empty<GameStage>(),
-                    StatNumber = ParseInt(row.c[3].v),
-                    MinStatForUse = ParseInt(row.c[4].v),
-                    MaxStatForUse = ParseInt(row.c[5].v),
-                };
-                list.Add(cd);
-            }
-
-            return list.ToArray();
-        }
-
-        private static int ParseInt(string? stringNumber)
-        {
-            return (int)double.Parse(stringNumber ?? "0", NumberStyles.Any, NumberFormatInfo.InvariantInfo);
-        }
+        public static double ParseDouble(string? stringNumber) =>
+            double.Parse(string.IsNullOrEmpty(stringNumber) ? "0" : stringNumber, NumberStyles.Any,
+                NumberFormatInfo.InvariantInfo);
     }
 }

@@ -1,10 +1,14 @@
 ﻿using System;
 using UnityEngine;
+using ZeroStats.Game;
 
-namespace ZeroStats.Game
+namespace ZeroStats.Common
 {
     public static class G
     {
+        private static GameConfig? _config;
+        public static IGameConfig Config => _config ??= Resources.Load<GameConfig>("Config");
+
         public static Sprite LoadSprite(string path) => Resources.Load<Sprite>(path);
         public static string Localize(string key) => key;
 
@@ -19,13 +23,6 @@ namespace ZeroStats.Game
 
         public static int Milliseconds(this AnimationClip clip) => (int)(clip.length * 1000);
 
-        public static Color LoadColor(string path) => path switch
-        {
-            "ColorsBars/First" => Color.red,
-            "ColorsBars/Second" => Color.green,
-            "ColorsBars/Third" => Color.blue,
-            "ColorsBars/Fourth" => Color.yellow,
-            _ => Color.white,
-        };
+        public static Color LoadColor(string path) => Config.GetColor(path);
     }
 }

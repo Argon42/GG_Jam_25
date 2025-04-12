@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using ZeroStats.Common;
 
 namespace ZeroStats.Game
 {

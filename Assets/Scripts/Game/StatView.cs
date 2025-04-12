@@ -3,6 +3,7 @@ using DG.Tweening;
 using R3;
 using UnityEngine;
 using UnityEngine.UI;
+using ZeroStats.Common;
 using Random = UnityEngine.Random;
 
 namespace ZeroStats.Game
@@ -20,6 +21,7 @@ namespace ZeroStats.Game
 
             icon.sprite = G.LoadSprite($"Icons/{type.ToString()}");
             leftBar.color = G.LoadColor($"ColorsBars/{type.ToString()}");
+            rightBar.color = G.LoadColor($"ColorsBars/{type.ToString()}");
 
             _subscription = stat.Subscribe(v =>
             {

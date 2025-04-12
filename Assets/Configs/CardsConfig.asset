@@ -1,0 +1,272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaab3d2d5add45f4a84d804c0de82b8a, type: 3}
+  m_Name: CardsConfig
+  m_EditorClassIdentifier: 
+  database:
+    cards:
+    - Id: 0
+      IconPath: placeholder
+      Name: TestName 1
+      ResultDescription: Test result description 1
+      ResultResourcesPath: 
+      Stat1Delta: 5
+      Stat2Delta: 5
+      Stat3Delta: -5
+      Stat4Delta: -5
+    - Id: 1
+      IconPath: placeholder
+      Name: TestName 2
+      ResultDescription: Test result description 2
+      ResultResourcesPath: 
+      Stat1Delta: -5
+      Stat2Delta: -5
+      Stat3Delta: 5
+      Stat4Delta: 5
+    - Id: 2
+      IconPath: placeholder
+      Name: TestName 3
+      ResultDescription: Test result description 3
+      ResultResourcesPath: 
+      Stat1Delta: 5
+      Stat2Delta: 5
+      Stat3Delta: -5
+      Stat4Delta: -5
+    - Id: 3
+      IconPath: placeholder
+      Name: TestName 4
+      ResultDescription: Test result description 4
+      ResultResourcesPath: 
+      Stat1Delta: -5
+      Stat2Delta: -5
+      Stat3Delta: 5
+      Stat4Delta: 5
+    - Id: 4
+      IconPath: placeholder
+      Name: TestName 5
+      ResultDescription: Test result description 5
+      ResultResourcesPath: 
+      Stat1Delta: 5
+      Stat2Delta: 5
+      Stat3Delta: -5
+      Stat4Delta: -5
+    - Id: 5
+      IconPath: placeholder
+      Name: TestName 6
+      ResultDescription: Test result description 6
+      ResultResourcesPath: 
+      Stat1Delta: -5
+      Stat2Delta: -5
+      Stat3Delta: 5
+      Stat4Delta: 5
+    - Id: 6
+      IconPath: placeholder
+      Name: TestName 7
+      ResultDescription: Test result description 7
+      ResultResourcesPath: 
+      Stat1Delta: 5
+      Stat2Delta: 5
+      Stat3Delta: -5
+      Stat4Delta: -5
+    - Id: 7
+      IconPath: placeholder
+      Name: TestName 8
+      ResultDescription: Test result description 8
+      ResultResourcesPath: 
+      Stat1Delta: -5
+      Stat2Delta: -5
+      Stat3Delta: 5
+      Stat4Delta: 5
+    - Id: 8
+      IconPath: placeholder
+      Name: TestName 9
+      ResultDescription: Test result description 9
+      ResultResourcesPath: 
+      Stat1Delta: 5
+      Stat2Delta: 5
+      Stat3Delta: -5
+      Stat4Delta: -5
+    - Id: 9
+      IconPath: placeholder
+      Name: TestName 10
+      ResultDescription: Test result description 10
+      ResultResourcesPath: 
+      Stat1Delta: -5
+      Stat2Delta: -5
+      Stat3Delta: 5
+      Stat4Delta: 5
+    - Id: 10
+      IconPath: placeholder
+      Name: TestName 11
+      ResultDescription: Test result description 11
+      ResultResourcesPath: 
+      Stat1Delta: 5
+      Stat2Delta: 5
+      Stat3Delta: -5
+      Stat4Delta: -5
+    - Id: 11
+      IconPath: placeholder
+      Name: TestName 12
+      ResultDescription: Test result description 12
+      ResultResourcesPath: 
+      Stat1Delta: -5
+      Stat2Delta: -5
+      Stat3Delta: 5
+      Stat4Delta: 5
+    - Id: 12
+      IconPath: placeholder
+      Name: TestName 13
+      ResultDescription: Test result description 13
+      ResultResourcesPath: 
+      Stat1Delta: 5
+      Stat2Delta: 5
+      Stat3Delta: -5
+      Stat4Delta: -5
+    - Id: 13
+      IconPath: placeholder
+      Name: TestName 14
+      ResultDescription: Test result description 14
+      ResultResourcesPath: 
+      Stat1Delta: -5
+      Stat2Delta: -5
+      Stat3Delta: 5
+      Stat4Delta: 5
+    - Id: 14
+      IconPath: placeholder
+      Name: TestName 15
+      ResultDescription: Test result description 15
+      ResultResourcesPath: 
+      Stat1Delta: 5
+      Stat2Delta: 5
+      Stat3Delta: -5
+      Stat4Delta: -5
+    - Id: 15
+      IconPath: placeholder
+      Name: TestName 16
+      ResultDescription: Test result description 16
+      ResultResourcesPath: 
+      Stat1Delta: -5
+      Stat2Delta: -5
+      Stat3Delta: 5
+      Stat4Delta: 5
+    - Id: 16
+      IconPath: placeholder
+      Name: TestName 17
+      ResultDescription: Test result description 17
+      ResultResourcesPath: 
+      Stat1Delta: -5
+      Stat2Delta: -5
+      Stat3Delta: 5
+      Stat4Delta: 5
+    cardDescriptors:
+    - CardId: 0
+      Weight: 1
+      NotApplicableStages: 03000000
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 1
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 2
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 3
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 4
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 5
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 6
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 7
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 8
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 9
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 10
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 11
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 12
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 13
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 14
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 15
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
+    - CardId: 16
+      Weight: 1
+      NotApplicableStages: 
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20

@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLabel: {fileID: 8011696276384282413}
-  showAnimation: {fileID: 7400000, guid: 75edb0858a6d23e40a391b93e79c81ed, type: 2}
-  hideAnimation: {fileID: 7400000, guid: 75edb0858a6d23e40a391b93e79c81ed, type: 2}
+  showAnimation: {fileID: 7400000, guid: 6cae1b1eb61279c499c9313eb389f273, type: 2}
+  hideAnimation: {fileID: 7400000, guid: c581b634d620f1f469ed336f1a5d8d75, type: 2}
   animation: {fileID: 2807063313946171424}
   delayOfClose: 1000
   delayOfOpen: 1000
@@ -142,8 +142,10 @@ Animation:
   m_GameObject: {fileID: 2431852012406650115}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 6cae1b1eb61279c499c9313eb389f273, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 6cae1b1eb61279c499c9313eb389f273, type: 2}
+  - {fileID: 7400000, guid: c581b634d620f1f469ed336f1a5d8d75, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0

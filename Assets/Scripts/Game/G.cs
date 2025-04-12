@@ -16,8 +16,16 @@ namespace ZeroStats.Game
             GameStage.Night => $"Ночь {stage.Day + 1}",
             _ => throw new ArgumentOutOfRangeException(nameof(stage), stage, null),
         };
-        
-        
+
         public static int Milliseconds(this AnimationClip clip) => (int)(clip.length * 1000);
+
+        public static Color LoadColor(string path) => path switch
+        {
+            "ColorsBars/First" => Color.red,
+            "ColorsBars/Second" => Color.green,
+            "ColorsBars/Third" => Color.blue,
+            "ColorsBars/Fourth" => Color.yellow,
+            _ => Color.white,
+        };
     }
 }

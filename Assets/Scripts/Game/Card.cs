@@ -16,5 +16,6 @@ namespace ZeroStats.Game
         public int Stat2Delta;
         public int Stat3Delta;
         public int Stat4Delta;
+        public int Group;
     }
 }

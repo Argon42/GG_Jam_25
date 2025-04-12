@@ -88,7 +88,7 @@ namespace ZeroStats.Game
 
         private IEnumerable<Card> GenerateCardsForStage(StageState stageState, int neededCards)
         {
-            var result = new List<int>();
+            var result = new List<Card>();
             var cards = cardsConfig.Descriptors
                 .Where(descriptor => !descriptor.NotApplicableStages.Contains(stageState.Current))
                 .Where(descriptor => descriptor.StatNumber switch
@@ -103,11 +103,17 @@ namespace ZeroStats.Game
 
             for (int i = 0; i < neededCards; i++)
             {
-                result.Add(GetCard(cards));
-                cards.RemoveAll(descriptor => result.Any(cardId => cardId == descriptor.CardId));
+                var card = cardsConfig.GetCard(GetCard(cards));
+                result.Add(card);
+                cards.RemoveAll(descriptor => result.Any(cardInResults =>
+                {
+                    var cardFromDes = cardsConfig.GetCard(descriptor.CardId);
+                    return cardInResults.Id == descriptor.CardId
+                           || (cardInResults.Group == cardFromDes.Group && cardFromDes.Group != 0);
+                }));
             }
 
-            return result.Select(id => cardsConfig.GetCard(id)).ToList();
+            return result;
         }
 
         private int GetCard(List<CardDescriptor> cards)

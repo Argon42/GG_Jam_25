@@ -106,7 +106,7 @@ namespace ZeroStats.Game
             var list = new List<Card>();
             foreach (var row in response.table.rows)
             {
-                if (row.c.Length < 9)
+                if (row.c.Length < 10)
                     throw new InvalidOperationException("not enough columns. expected 9, got " + row.c.Length);
                 var card = new Card
                 {
@@ -119,6 +119,7 @@ namespace ZeroStats.Game
                     Stat2Delta = ParseInt(row.c[6].v),
                     Stat3Delta = ParseInt(row.c[7].v),
                     Stat4Delta = ParseInt(row.c[8].v),
+                    Group = ParseInt(row.c[9].v),
                 };
                 list.Add(card);
             }

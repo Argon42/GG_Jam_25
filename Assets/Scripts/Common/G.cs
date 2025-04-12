@@ -23,13 +23,6 @@ namespace ZeroStats.Common
 
         public static int Milliseconds(this AnimationClip clip) => (int)(clip.length * 1000);
 
-        public static Color LoadColor(string path) => path switch
-        {
-            "ColorsBars/First" => Color.red,
-            "ColorsBars/Second" => Color.green,
-            "ColorsBars/Third" => Color.blue,
-            "ColorsBars/Fourth" => Color.yellow,
-            _ => Color.white,
-        };
+        public static Color LoadColor(string path) => Config.GetColor(path);
     }
 }

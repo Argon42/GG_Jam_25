@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace ZeroStats.Game
 {
@@ -6,5 +7,8 @@ namespace ZeroStats.Game
     {
         IReadOnlyList<CardDescriptor> Descriptors { get; }
         Card GetCard(int id);
+        int GetInt(string paramName);
+        float GetFloat(string paramName);
+        Color GetColor(string colorName);
     }
 }

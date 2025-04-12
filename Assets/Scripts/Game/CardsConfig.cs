@@ -13,11 +13,14 @@ namespace ZeroStats.Game
         public IReadOnlyList<CardDescriptor> Descriptors => database.cardDescriptors;
 
         public Card GetCard(int id) => database.cards.First(card => card.Id == id);
+        public int GetInt(string paramName) => database.parameters.GetInt(paramName);
+        public float GetFloat(string paramName) => database.parameters.GetFloat(paramName);
+        public Color GetColor(string colorName) => database.colors.First(color => color.name == colorName).color;
 
         [ContextMenu("Generate Descriptors")]
         public async UniTaskVoid GenerateDescriptors()
         {
-            database = await new GoogleSheetLoader().Start();
+            database = await new GoogleSheetLoader().LoadAllData();
         }
     }
 }

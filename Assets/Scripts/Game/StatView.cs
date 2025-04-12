@@ -21,6 +21,7 @@ namespace ZeroStats.Game
 
             icon.sprite = G.LoadSprite($"Icons/{type.ToString()}");
             leftBar.color = G.LoadColor($"ColorsBars/{type.ToString()}");
+            rightBar.color = G.LoadColor($"ColorsBars/{type.ToString()}");
 
             _subscription = stat.Subscribe(v =>
             {

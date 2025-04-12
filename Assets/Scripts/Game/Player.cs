@@ -9,8 +9,8 @@ namespace ZeroStats.Game
 {
     public class Player : MonoBehaviour
     {
-        public const int MaxStatValueAbs = 20;
-        private const int HandSizeDefault = 2;
+        public static int MaxStatValueAbs => G.Config.GetInt("MaxStatValue");
+        private static int HandSizeDefault => G.Config.GetInt("HandSizeDefault");
 
         public readonly ReactiveProperty<GameStage> Stage = new(GameStage.None);
         public readonly ReactiveProperty<int> Day = new(0);

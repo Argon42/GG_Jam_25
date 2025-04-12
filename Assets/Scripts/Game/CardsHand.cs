@@ -30,8 +30,8 @@ namespace ZeroStats.Game
         {
             var rect = cardsContainer.rect;
             var cardWidth = rect.width / cardsCount;
-            var x = cardWidth * indexOf;
-            var y = rect.height / 2f;
+            var x = cardWidth * indexOf - cardWidth / 2f;
+            var y = rect.height / 2f - rect.height / 2f;
             return new Vector2(x, y);
         }
 
@@ -50,9 +50,10 @@ namespace ZeroStats.Game
                 }
                 else
                 {
-                    cardView.Hide( () => Destroy(cardView.gameObject));
+                    cardView.Hide(() => Destroy(cardView.gameObject));
                 }
             }
+
             _cardViews.Clear();
         }
     }

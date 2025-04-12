@@ -32,12 +32,12 @@ namespace ZeroStats.Game
 
         private static float CalculateNormalizedForRight(int maxValue, int v)
         {
-            return Mathf.Abs(Mathf.Min(v, 0)) / (float)maxValue;
+            return Mathf.Max(v, 0) / (float)maxValue;
         }
 
         private static float CalculateNormalizedForLeft(int maxValue, int v)
         {
-            return Mathf.Max(v, 0) / (float)maxValue;
+            return Mathf.Abs(Mathf.Min(v, 0)) / (float)maxValue;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace ZeroStats.Game
         public void Show(List<Card> cards, Action<Card> onSelectCard)
         {
             gameObject.SetActive(true);
+            stageResult.Hide();
             cardsHand.Show(cards, onSelectCard);
         }
 
@@ -24,6 +25,7 @@ namespace ZeroStats.Game
 
         public void Hide()
         {
+            stageResult.Hide();
             gameObject.SetActive(false);
         }
     }

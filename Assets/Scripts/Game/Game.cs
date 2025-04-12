@@ -24,6 +24,7 @@ namespace ZeroStats.Game
 
         private async UniTaskVoid StartGame(Action hideAction)
         {
+            player.StartNewGame();
             var nextStage = player.GetNextStage();
             await stagePreloaderScreen.Show(nextStage, () =>
             {
@@ -55,7 +56,6 @@ namespace ZeroStats.Game
 
         private void OnRestart()
         {
-            player.StartNewGame();
             StartGame(() => resultScreen.Hide()).Forget();
         }
 

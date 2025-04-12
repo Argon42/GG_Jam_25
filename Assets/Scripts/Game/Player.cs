@@ -74,6 +74,7 @@ namespace ZeroStats.Game
             Stat3.Value = 0;
             Stat4.Value = 0;
             Day.Value = 0;
+            Stage.Value = GameStage.None;
             _stages.Clear();
             _modificators.Clear();
         }

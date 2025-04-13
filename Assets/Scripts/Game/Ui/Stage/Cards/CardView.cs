@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using ZeroStats.Common;
 using ZeroStats.Game.Data.Enums;
 using ZeroStats.Game.Data.Remote;
+using Random = UnityEngine.Random;
 
 namespace ZeroStats.Game.Ui.Stage.Cards
 {
@@ -24,13 +25,18 @@ namespace ZeroStats.Game.Ui.Stage.Cards
         [SerializeField] private float speed = 5f;
         [SerializeField] private Image glow = default!;
         [SerializeField] private AnimationSoundEventHandler audioSource = default!;
+        [SerializeField] private AspectRatioFitter fitter = default!;
 
         private Coroutine? _enterCoroutine;
 
         public void Show(Card card, Func<Vector2> position, Action onSelect)
         {
             transform.localPosition = position.Invoke();
-            G.LoadSprite(card.IconPath, sprite => image.sprite = sprite).Forget();
+            G.LoadSprite(card.IconPath, sprite =>
+            {
+                image.sprite = sprite;
+                fitter.aspectRatio = (float) sprite.texture.width / sprite.texture.height;
+            }).Forget();
             text.text = G.Localize(card.Name);
             button.onClick.AddListener(onSelect.Invoke);
             var color = glow.color;
@@ -59,10 +65,15 @@ namespace ZeroStats.Game.Ui.Stage.Cards
                     .Show(card.Stat4Delta, StatType.Fourth, G.KnowCard(card.Id));
         }
 
-        public void Hide(Action onEnd)
+        public async void Hide(Action onEnd)
         {
             button.onClick.RemoveAllListeners();
-            onEnd.Invoke();
+            var outTime = 0.6f + Random.Range(-0.2f, 0.2f);
+            DOTween.Sequence()
+                .Insert(0, canvasGroup.DOFade(0f, outTime))
+                .Insert(0, transform.DOScale(Vector3.zero, outTime))
+                .Insert(0, transform.DORotate(Vector3.forward * 50 * (Random.value > 0.5f ? 1f : -1f), outTime))
+                .OnComplete(onEnd.Invoke);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
@@ -107,6 +118,7 @@ namespace ZeroStats.Game.Ui.Stage.Cards
         private Tween? glowTween;
         private bool isHeld = false;
         private bool isPointerOver = false;
+        [SerializeField] private CanvasGroup canvasGroup;
 
         public void OnPointerDown(PointerEventData eventData)
         {

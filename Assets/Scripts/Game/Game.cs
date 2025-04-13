@@ -44,11 +44,11 @@ namespace ZeroStats.Game
         {
             player.ApplyEffect(selectedCard);
             await stageScreen.ApplyEffect(selectedCard);
-            if (player.IsLoose())
+            if (player.IsLoose(out var stats))
             {
                 stageScreen.Hide();
                 backgroundWorld.Show(GameStage.Result);
-                resultScreen.Show(OnRestart);
+                resultScreen.Show(OnRestart, stats);
                 return;
             }
 

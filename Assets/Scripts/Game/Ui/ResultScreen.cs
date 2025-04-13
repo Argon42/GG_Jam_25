@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using ZeroStats.Game.Data.Enums;
 
 namespace ZeroStats.Game.Ui
 {
@@ -14,7 +16,7 @@ namespace ZeroStats.Game.Ui
             restartButton.onClick.AddListener(OnRestart);
         }
 
-        public void Show(Action onRestart)
+        public void Show(Action onRestart, HashSet<(StatType stat, bool isPositive)> results)
         {
             gameObject.SetActive(true);
             _onRestart = onRestart;

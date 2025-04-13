@@ -41,14 +41,14 @@ namespace ZeroStats.Game
                     .AdditionalCards
                     .Add(G.Config.GetCard(card.AddCardIdInPool));
             }
-            
+
             G.SetKnownCard(card.Id);
         }
 
         private StageState GetStage(int offset)
         {
             var stageState = CurrentStage.Value;
-            while (_stages.Count < offset+1)
+            while (_stages.Count < offset + 1)
             {
                 stageState = CreateNewStage(stageState.Day, stageState.Current);
                 _stages.Add(stageState);
@@ -166,11 +166,21 @@ namespace ZeroStats.Game
             return cards[0].CardId;
         }
 
-        public bool IsLoose() =>
-            Mathf.Abs(Stat1.Value) >= MaxStatValueAbs ||
-            Mathf.Abs(Stat2.Value) >= MaxStatValueAbs ||
-            Mathf.Abs(Stat3.Value) >= MaxStatValueAbs ||
-            Mathf.Abs(Stat4.Value) >= MaxStatValueAbs;
+        public bool IsLoose(out HashSet<(StatType stat, bool isPositive)> unknown)
+        {
+            var isFirstStat = Mathf.Abs(Stat1.Value) >= MaxStatValueAbs;
+            var isSecondStat = Mathf.Abs(Stat2.Value) >= MaxStatValueAbs;
+            var isThirdStat = Mathf.Abs(Stat3.Value) >= MaxStatValueAbs;
+            var isFourthStat = Mathf.Abs(Stat4.Value) >= MaxStatValueAbs;
+
+            unknown = new HashSet<(StatType stat, bool isPositive)>();
+            if (isFirstStat) unknown.Add((StatType.First, Stat1.Value > 0));
+            if (isSecondStat) unknown.Add((StatType.Second, Stat2.Value > 0));
+            if (isThirdStat) unknown.Add((StatType.Third, Stat3.Value > 0));
+            if (isFourthStat) unknown.Add((StatType.Fourth, Stat4.Value > 0));
+
+            return isFirstStat || isSecondStat || isThirdStat || isFourthStat;
+        }
 
         private static StageState Dequeue(List<StageState> stages)
         {

@@ -20,33 +20,31 @@ namespace ZeroStats.Game
 
         private void Update()
         {
-            handRight.transform.localPosition =
-                Vector3.Lerp(handRight.transform.localPosition, GetLocalMousePosition(area), 0.6f);
+            var handView = handRight;
+            var worldTarget = pivotHandRight.position;
+            var target = GetLocalMousePosition(area);
 
-            AlignHandToPoint(handRight, pivotHandRight.position);
+
+            handView.transform.localPosition = Vector3.Lerp(handView.transform.localPosition, target, 0.6f);
+            handView.transform.rotation = AlignHandToPoint(handView, worldTarget);
         }
 
-        private void AlignHandToPoint(HandView hand, Vector3 worldTarget)
+        private Quaternion AlignHandToPoint(HandView hand, Vector3 worldTarget)
         {
             var dir = (worldTarget - hand.PointTransform.position).normalized;
             var dirHand = (hand.EndTransform.position - hand.PointTransform.position).normalized;
-            
+
             Debug.DrawRay(hand.PointTransform.position, dir * 1000, Color.green);
             Debug.DrawRay(hand.PointTransform.position, dirHand * 1000, Color.red);
 
             float angle = -Vector2.SignedAngle(dir, dirHand);
-            hand.transform.rotation = Quaternion.AngleAxis(hand.transform.eulerAngles.z + angle, Vector3.forward);
+            return Quaternion.AngleAxis(hand.transform.eulerAngles.z + angle, Vector3.forward);
         }
 
-        public static Vector3 GetLocalMousePosition(RectTransform rectTransform)
-        {
+        private static Vector3 GetLocalMousePosition(RectTransform rectTransform) =>
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                rectTransform,
-                Input.mousePosition,
-                null,
-                out var localPoint
-            );
-            return localPoint;
-        }
+                rectTransform, Input.mousePosition, null, out var localPoint)
+                ? localPoint
+                : Vector3.zero;
     }
 }

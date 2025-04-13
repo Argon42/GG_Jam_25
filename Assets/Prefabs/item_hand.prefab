@@ -202,6 +202,7 @@ MonoBehaviour:
   shadow: {fileID: 1357062524647072737}
   hand: {fileID: 7733804187940181760}
   shadowOffset: -50
+  angleOfClick: 0.9
 --- !u!1 &8412440150548486460
 GameObject:
   m_ObjectHideFlags: 0

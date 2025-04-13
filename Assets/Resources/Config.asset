@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database:
     cards:
-    - Id: 0
+    - Id: 1
       IconPath: placeholder
       Name: "\u041F\u043E\u0436\u0430\u0440\u0438\u0442\u044C \u044F\u0438\u0447\u043D\u0438\u0446\u0443"
       ResultDescription: "\u042F\u0439\u0446\u0430 \u043D\u044B\u0447\u043D\u0435
@@ -25,7 +25,9 @@ MonoBehaviour:
       Stat3Delta: -4
       Stat4Delta: 0
       Group: 1
-    - Id: 1
+      AddCardIdInPool: 1
+      StageDelayForAddToPool: 2
+    - Id: 2
       IconPath: placeholder
       Name: "\u0427\u0430\u0448\u043A\u0430 \u043A\u043E\u0444\u0435 \u0432 \u041A\u043E\u0444\u0435\u0439\u043D\u0435"
       ResultDescription: "\u0421\u043B\u0438\u0448\u043A\u043E\u043C \u0441\u0438\u043B\u044C\u043D\u043E
@@ -36,7 +38,9 @@ MonoBehaviour:
       Stat3Delta: -8
       Stat4Delta: 0
       Group: 0
-    - Id: 2
+      AddCardIdInPool: 1
+      StageDelayForAddToPool: 0
+    - Id: 3
       IconPath: placeholder
       Name: "\u041F\u0440\u043E\u0431\u0435\u0436\u043A\u0430"
       ResultDescription: "\u0418 \u0437\u0430\u0447\u0435\u043C \u0431\u044B\u043B\u043E
@@ -47,7 +51,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-    - Id: 3
+      AddCardIdInPool: 1
+      StageDelayForAddToPool: 0
+    - Id: 4
       IconPath: placeholder
       Name: "\u041F\u043E\u043B\u0435\u0436\u0430\u0442\u044C \u0435\u0449\u0451
         \u043D\u0435\u043C\u043D\u043E\u0433\u043E"
@@ -59,7 +65,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-    - Id: 4
+      AddCardIdInPool: 1
+      StageDelayForAddToPool: 0
+    - Id: 5
       IconPath: placeholder
       Name: "\u0411\u044B\u0441\u0442\u0440\u0435\u0435 \u043D\u0430 \u0440\u0430\u0431\u043E\u0442\u0443!"
       ResultDescription: "\"\u041D\u043E \u043A\u0430\u043A\u043E\u0439 \u0446\u0435\u043D\u043E\u0439?!?!\"
@@ -71,7 +79,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-    - Id: 5
+      AddCardIdInPool: 1
+      StageDelayForAddToPool: 0
+    - Id: 6
       IconPath: placeholder
       Name: "\u0421\u044B\u0433\u0440\u0430\u0442\u044C \u043A\u0430\u0442\u043A\u0443
         \u0432 \u0413\u0435\u0440\u043E\u0435\u0432 3"
@@ -83,7 +93,9 @@ MonoBehaviour:
       Stat3Delta: -6
       Stat4Delta: 4
       Group: 0
-    - Id: 6
+      AddCardIdInPool: 1
+      StageDelayForAddToPool: 0
+    - Id: 7
       IconPath: placeholder
       Name: "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u0441\u044F \u043D\u0430
         \u0440\u0430\u0431\u043E\u0442\u0443"
@@ -94,7 +106,9 @@ MonoBehaviour:
       Stat3Delta: 10
       Stat4Delta: -10
       Group: 0
-    - Id: 7
+      AddCardIdInPool: 1
+      StageDelayForAddToPool: 0
+    - Id: 8
       IconPath: placeholder
       Name: "\u0420\u0430\u0441\u043F\u043B\u0430\u043D\u0438\u0440\u043E\u0432\u0430\u0442\u044C
         \u0432\u0435\u0441\u044C \u0434\u0435\u043D\u044C"
@@ -107,7 +121,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: -8
       Group: 0
-    - Id: 8
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 9
       IconPath: placeholder
       Name: "\u041F\u043E\u0434\u043A\u0438\u043D\u0443\u0442\u044C \u043C\u043E\u043D\u0435\u0442
         \u0431\u0435\u0437\u0434\u043E\u043C\u043D\u043E\u043C\u0443"
@@ -120,7 +136,9 @@ MonoBehaviour:
       Stat3Delta: -4
       Stat4Delta: 4
       Group: 0
-    - Id: 9
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 10
       IconPath: placeholder
       Name: "\u042F\u0438\u0447\u043D\u0438\u0446\u0430 \u043F\u043E\u0434\u0433\u043E\u0440\u0435\u043B\u0430"
       ResultDescription: "\u0412 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439
@@ -132,7 +150,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 1
-    - Id: 10
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 11
       IconPath: placeholder
       Name: "\u0414\u0435\u043D\u044C \u0441\u0443\u0440\u043A\u0430"
       ResultDescription: "\u042F \u0432 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E\u043C
@@ -143,7 +163,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: -4
       Group: 0
-    - Id: 11
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 12
       IconPath: placeholder
       Name: "\u041A\u043E\u043D\u0442\u0440\u0430\u0441\u0442\u043D\u044B\u0439 \u0434\u0443\u0448"
       ResultDescription: "\u042F \u0442\u043E\u0447\u043D\u043E \u043F\u0440\u043E\u0441\u043D\u0443\u043B\u0441\u044F
@@ -155,7 +177,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-    - Id: 12
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 13
       IconPath: placeholder
       Name: "\u0425\u043E\u0440\u043E\u0448\u043E \u043F\u043E\u0440\u0430\u0431\u043E\u0442\u0430\u0442\u044C"
       ResultDescription: "\u041F\u043E\u0447\u0435\u043C\u0443 \u044F \u0434\u043E\u043B\u0436\u0435\u043D
@@ -166,7 +190,9 @@ MonoBehaviour:
       Stat3Delta: 6
       Stat4Delta: -4
       Group: 0
-    - Id: 13
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 14
       IconPath: placeholder
       Name: "\u0411\u0438\u0437\u043D\u0435\u0441-\u041B\u0430\u043D\u0441"
       ResultDescription: "\u0412\u043A\u0443\u0441\u043D\u043E \u0438 \u0434\u043E\u0440\u043E\u0433\u043E!"
@@ -176,7 +202,9 @@ MonoBehaviour:
       Stat3Delta: -8
       Stat4Delta: 6
       Group: 0
-    - Id: 14
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 15
       IconPath: placeholder
       Name: "\u041E\u0431\u0441\u0443\u0436\u0434\u0435\u043D\u0438\u044F \u0432
         \u043A\u0443\u0440\u0438\u043B\u043A\u0435"
@@ -189,7 +217,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 6
       Group: 0
-    - Id: 15
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 16
       IconPath: placeholder
       Name: "\u0414\u043E\u0434\u0435\u043B\u0430\u0442\u044C \u0440\u0430\u0431\u043E\u0442\u0443"
       ResultDescription: "\u041F\u0440\u043E\u0441\u0438\u0434\u0435\u043B \u0432\u0435\u0441\u044C
@@ -201,7 +231,9 @@ MonoBehaviour:
       Stat3Delta: 6
       Stat4Delta: -4
       Group: 0
-    - Id: 16
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 17
       IconPath: placeholder
       Name: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0435\u0439\u0441\u0442\u0435\u0439\u0448\u043D"
       ResultDescription: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F \u0432 \u044D\u0442\u043E\u043C
@@ -214,7 +246,9 @@ MonoBehaviour:
       Stat3Delta: -15
       Stat4Delta: 0
       Group: 0
-    - Id: 17
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 18
       IconPath: placeholder
       Name: "\u0414\u043E\u0436\u0434\u044C"
       ResultDescription: "\u041F\u0440\u0438\u0448\u043B\u043E\u0441\u044C \u0432\u044B\u0437\u0432\u0430\u0442\u044C
@@ -225,7 +259,9 @@ MonoBehaviour:
       Stat3Delta: -12
       Stat4Delta: 0
       Group: 0
-    - Id: 18
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 19
       IconPath: placeholder
       Name: "\u041F\u043E\u0439\u0442\u0438 \u043F\u0435\u0448\u043A\u043E\u043C
         \u043F\u043E\u0434 \u0434\u043E\u0436\u0434\u0451\u043C"
@@ -236,7 +272,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-    - Id: 19
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 20
       IconPath: placeholder
       Name: "\u041E\u0442\u043B\u043E\u0436\u0438\u0442\u044C \u0432\u0441\u0435
         \u0434\u0435\u043B\u0430 \u043D\u0430 \u0432\u0435\u0447\u0435\u0440"
@@ -248,7 +286,9 @@ MonoBehaviour:
       Stat3Delta: -8
       Stat4Delta: 4
       Group: 0
-    - Id: 20
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 21
       IconPath: placeholder
       Name: "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435
         \u043A\u0443\u0440\u0441\u044B"
@@ -260,7 +300,9 @@ MonoBehaviour:
       Stat3Delta: -8
       Stat4Delta: 6
       Group: 0
-    - Id: 21
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 22
       IconPath: placeholder
       Name: "\u0417\u0430\u043B\u0438\u043F\u043D\u0443\u0442\u044C \u0432 \u0441\u0435\u0440\u0438\u0430\u043B"
       ResultDescription: "\u041D\u0435 \u0437\u0440\u044F \u043F\u043E\u0442\u0440\u0430\u0442\u0438\u043B\u0441\u044F
@@ -272,7 +314,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: -4
       Group: 0
-    - Id: 22
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 23
       IconPath: placeholder
       Name: "\u0412 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0435 \u0442\u043E\u0432\u0430\u0440\u044B
         \u043F\u043E \u0430\u043A\u0446\u0438\u0438"
@@ -285,7 +329,9 @@ MonoBehaviour:
       Stat3Delta: -8
       Stat4Delta: 0
       Group: 0
-    - Id: 23
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 24
       IconPath: placeholder
       Name: "\u041D\u0435 \u0435\u0441\u0442\u044C \u043F\u043E\u0441\u043B\u0435
         \u0448\u0435\u0441\u0442\u0438"
@@ -298,7 +344,9 @@ MonoBehaviour:
       Stat3Delta: 8
       Stat4Delta: 0
       Group: 0
-    - Id: 24
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 25
       IconPath: placeholder
       Name: "\u0420\u0430\u0437\u043C\u044B\u0448\u043B\u044F\u0442\u044C \u043E
         \u0432\u0435\u0447\u043D\u043E\u043C"
@@ -311,7 +359,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: -8
       Group: 0
-    - Id: 25
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 26
       IconPath: placeholder
       Name: "\u0420\u0443\u0431\u0438\u0442\u044C\u0441\u044F \u0432 \u043F\u043B\u043E\u0439\u043A\u0443"
       ResultDescription: "\u042F \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E
@@ -322,7 +372,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: -4
       Group: 0
-    - Id: 26
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 27
       IconPath: placeholder
       Name: "\u041D\u0430\u043F\u0438\u0442\u044C\u0441\u044F"
       ResultDescription: "\u0412 \u044D\u0442\u043E\u043C \u0431\u0430\u0440\u0435
@@ -335,7 +387,9 @@ MonoBehaviour:
       Stat3Delta: -8
       Stat4Delta: 4
       Group: 0
-    - Id: 27
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 28
       IconPath: placeholder
       Name: "\u041F\u043E \u043F\u0438\u0432\u043A\u0443"
       ResultDescription: "\u0412\u0435\u0447\u0435\u0440 \u0434\u043E\u043B\u0436\u0435\u043D
@@ -346,7 +400,9 @@ MonoBehaviour:
       Stat3Delta: -4
       Stat4Delta: 8
       Group: 0
-    - Id: 28
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 29
       IconPath: placeholder
       Name: "\u0414\u043E\u043C\u0430 \u043F\u0438\u043B\u044F\u0442 \u043C\u043E\u0437\u0433"
       ResultDescription: "\u041B\u0443\u0447\u0448\u0435 \u0431\u044B \u043F\u043E\u0448\u0451\u043B
@@ -357,7 +413,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-    - Id: 29
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 30
       IconPath: placeholder
       Name: "\u0412\u043D\u0435\u0437\u0430\u043F\u043D\u044B\u0435 \u0433\u043E\u0441\u0442\u0438"
       ResultDescription: "\u041E, \u043A\u0430\u043A \u044F \u0432\u0430\u0441 \u0436\u0434\u0430\u043B"
@@ -367,7 +425,9 @@ MonoBehaviour:
       Stat3Delta: -4
       Stat4Delta: 6
       Group: 0
-    - Id: 30
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 31
       IconPath: placeholder
       Name: "\u041D\u0435 \u0441\u0432\u0435\u0436\u0430\u044F \u0435\u0434\u0430"
       ResultDescription: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F \u044D\u0442\u043E
@@ -380,7 +440,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-    - Id: 31
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 32
       IconPath: placeholder
       Name: "\u041F\u0440\u043E\u0441\u043F\u0430\u0442\u044C \u0434\u043E \u043E\u0431\u0435\u0434\u0430"
       ResultDescription: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F \u044F \u043E\u043F\u043E\u0437\u0434\u0430\u044E,
@@ -394,7 +456,9 @@ MonoBehaviour:
       Stat3Delta: -8
       Stat4Delta: 0
       Group: 0
-    - Id: 32
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 33
       IconPath: placeholder
       Name: "\u0421\u043F\u0430\u0442\u044C "
       ResultDescription: "\u041D\u0435\u0442 \u043D\u0438\u0447\u0435\u0433\u043E
@@ -406,7 +470,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-    - Id: 33
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 34
       IconPath: placeholder
       Name: "\u0428\u0443\u043C\u043D\u044B\u0435 \u0441\u043E\u0441\u0435\u0434\u0438"
       ResultDescription: "\u041E, \u043A\u0430\u043A \u0436\u0435 \u044F \u0432\u0430\u043C
@@ -417,7 +483,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: -2
       Group: 0
-    - Id: 34
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 35
       IconPath: placeholder
       Name: "\u041F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C, \u0447\u0442\u043E
         \u0448\u0443\u043C\u0438\u0442 \u043D\u0430 \u0443\u043B\u0438\u0446\u0435"
@@ -430,7 +498,9 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-    - Id: 35
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 36
       IconPath: placeholder
       Name: "\u0417\u0430\u0432\u0435\u0441\u0442\u0438 \u0431\u0443\u0434\u0438\u043B\u044C\u043D\u0438\u043A
         \u0440\u0430\u043D\u044C\u0448\u0435"
@@ -443,7 +513,9 @@ MonoBehaviour:
       Stat3Delta: 5
       Stat4Delta: 5
       Group: 0
-    - Id: 36
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
+    - Id: 37
       IconPath: placeholder
       Name: "\u0417\u0430\u0441\u0438\u0434\u0435\u043B\u0441\u044F \u0434\u043E
         \u0443\u0442\u0440\u0430"
@@ -456,13 +528,9 @@ MonoBehaviour:
       Stat3Delta: 5
       Stat4Delta: 5
       Group: 0
+      AddCardIdInPool: 0
+      StageDelayForAddToPool: 0
     cardDescriptors:
-    - CardId: 0
-      Weight: 50
-      NotApplicableStages: 030000000400000005000000
-      StatNumber: -1
-      MinStatForUse: -20
-      MaxStatForUse: 20
     - CardId: 1
       Weight: 50
       NotApplicableStages: 030000000400000005000000
@@ -531,7 +599,7 @@ MonoBehaviour:
       MaxStatForUse: 20
     - CardId: 12
       Weight: 50
-      NotApplicableStages: 020000000400000005000000
+      NotApplicableStages: 030000000400000005000000
       StatNumber: -1
       MinStatForUse: -20
       MaxStatForUse: 20
@@ -585,7 +653,7 @@ MonoBehaviour:
       MaxStatForUse: 20
     - CardId: 21
       Weight: 50
-      NotApplicableStages: 020000000300000005000000
+      NotApplicableStages: 020000000400000005000000
       StatNumber: -1
       MinStatForUse: -20
       MaxStatForUse: 20
@@ -645,7 +713,7 @@ MonoBehaviour:
       MaxStatForUse: 20
     - CardId: 31
       Weight: 50
-      NotApplicableStages: 020000000300000004000000
+      NotApplicableStages: 020000000300000005000000
       StatNumber: -1
       MinStatForUse: -20
       MaxStatForUse: 20
@@ -679,6 +747,12 @@ MonoBehaviour:
       StatNumber: -1
       MinStatForUse: -20
       MaxStatForUse: 20
+    - CardId: 37
+      Weight: 50
+      NotApplicableStages: 020000000300000004000000
+      StatNumber: -1
+      MinStatForUse: -20
+      MaxStatForUse: 20
     colors:
     - name: NameColor
       color: {r: 1, g: 1, b: 1, a: 1}
@@ -696,4 +770,4 @@ MonoBehaviour:
       - HandSizeDefault
       values:
       - 20.000000
-      - 2.000000
+      - 3.000000

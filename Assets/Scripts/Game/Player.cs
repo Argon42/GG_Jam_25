@@ -4,6 +4,9 @@ using System.Linq;
 using R3;
 using UnityEngine;
 using ZeroStats.Common;
+using ZeroStats.Game.Data;
+using ZeroStats.Game.Data.Enums;
+using ZeroStats.Game.Data.Remote;
 
 namespace ZeroStats.Game
 {
@@ -19,9 +22,11 @@ namespace ZeroStats.Game
         public readonly ReactiveProperty<int> Stat2 = new(0);
         public readonly ReactiveProperty<int> Stat3 = new(0);
         public readonly ReactiveProperty<int> Stat4 = new(0);
+        public ReactiveProperty<StageState> CurrentStage { get; } = new();
 
-        private readonly Queue<StageState> _stages = new();
+        private readonly List<StageState> _stages = new();
         private readonly HashSet<PlayerModificator> _modificators = new();
+
 
         public void ApplyEffect(Card card)
         {
@@ -29,13 +34,35 @@ namespace ZeroStats.Game
             Stat2.Value += card.Stat2Delta;
             Stat3.Value += card.Stat3Delta;
             Stat4.Value += card.Stat4Delta;
+
+            if (card.AddCardIdInPool != 0)
+            {
+                GetStage(card.StageDelayForAddToPool)
+                    .AdditionalCards
+                    .Add(G.Config.GetCard(card.AddCardIdInPool));
+            }
+            
+            G.SetKnownCard(card.Id);
         }
 
-        public StageState GetNextStage()
+        private StageState GetStage(int offset)
         {
-            var stageState = _stages.Count > 0 ? _stages.Dequeue() : CreateNewStage(Day.Value, Stage.Value);
+            var stageState = CurrentStage.Value;
+            while (_stages.Count < offset+1)
+            {
+                stageState = CreateNewStage(stageState.Day, stageState.Current);
+                _stages.Add(stageState);
+            }
+
+            return _stages[offset];
+        }
+
+        public StageState ChangeStage()
+        {
+            var stageState = _stages.Count > 0 ? Dequeue(_stages) : CreateNewStage(Day.Value, Stage.Value);
             Day.Value = stageState.Day;
             Stage.Value = stageState.Current;
+            CurrentStage.Value = stageState;
             return stageState;
         }
 
@@ -144,5 +171,12 @@ namespace ZeroStats.Game
             Mathf.Abs(Stat2.Value) >= MaxStatValueAbs ||
             Mathf.Abs(Stat3.Value) >= MaxStatValueAbs ||
             Mathf.Abs(Stat4.Value) >= MaxStatValueAbs;
+
+        private static StageState Dequeue(List<StageState> stages)
+        {
+            var stageState = stages.First();
+            stages.RemoveAt(0);
+            return stageState;
+        }
     }
 }

@@ -1,6 +1,12 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using ZeroStats.Game.Data.Enums;
+using ZeroStats.Game.Data.Remote;
+using ZeroStats.Game.Ui;
+using ZeroStats.Game.Ui.Stage;
+using ZeroStats.Game.Ui.Stage.Preloader;
+using ZeroStats.Game.Ui.StartGame;
 
 namespace ZeroStats.Game
 {
@@ -25,7 +31,7 @@ namespace ZeroStats.Game
         private async UniTaskVoid StartGame(Action hideAction)
         {
             player.StartNewGame();
-            var nextStage = player.GetNextStage();
+            var nextStage = player.ChangeStage();
             await stagePreloaderScreen.Show(nextStage, () =>
             {
                 hideAction();
@@ -46,7 +52,7 @@ namespace ZeroStats.Game
                 return;
             }
 
-            var stageState = player.GetNextStage();
+            var stageState = player.ChangeStage();
             await stagePreloaderScreen.Show(stageState, () =>
             {
                 stageScreen.Show(player.GetCards(stageState), card => OnSelectCard(card).Forget());

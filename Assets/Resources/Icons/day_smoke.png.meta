@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 73eef1359e7cde349bedc33cece48cd5
+guid: 98071d6244d2399428cd00ebf1b0c53d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2910296673025610260
-    second: Third_0
+      213: -5243717095587516679
+    second: day_smoke_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Third_0
+      name: day_smoke_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 21
-        width: 227
-        height: 227
+        x: 52
+        y: 19
+        width: 205
+        height: 269
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cedae45689c8c97d0800000000000000
-      internalID: -2910296673025610260
+      spriteID: 9feecde75139a37b0800000000000000
+      internalID: -5243717095587516679
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Third_0: -2910296673025610260
+      day_smoke_0: -5243717095587516679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

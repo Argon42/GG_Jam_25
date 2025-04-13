@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 73eef1359e7cde349bedc33cece48cd5
+guid: 427b0c303b2a07d4d854522626687cb4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2910296673025610260
-    second: Third_0
+      213: -5045714209327129183
+    second: day_learn_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Third_0
+      name: day_learn_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 22
         y: 21
-        width: 227
-        height: 227
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cedae45689c8c97d0800000000000000
-      internalID: -2910296673025610260
+      spriteID: 1ad5ae2f8a50af9b0800000000000000
+      internalID: -5045714209327129183
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Third_0: -2910296673025610260
+      day_learn_0: -5045714209327129183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

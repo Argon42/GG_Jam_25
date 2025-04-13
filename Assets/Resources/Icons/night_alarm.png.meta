@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 73eef1359e7cde349bedc33cece48cd5
+guid: eab39d154e6115d468122cbebe722abb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2910296673025610260
-    second: Third_0
+      213: -786519942173259904
+    second: night_alarm_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Third_0
+      name: night_alarm_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 21
-        width: 227
-        height: 227
+        x: 19
+        y: 68
+        width: 260
+        height: 205
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cedae45689c8c97d0800000000000000
-      internalID: -2910296673025610260
+      spriteID: 087800e9748b515f0800000000000000
+      internalID: -786519942173259904
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Third_0: -2910296673025610260
+      night_alarm_0: -786519942173259904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

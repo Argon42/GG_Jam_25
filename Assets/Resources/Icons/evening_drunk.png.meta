@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 73eef1359e7cde349bedc33cece48cd5
+guid: c674ba304255aaf44b92257fd54ffd97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2910296673025610260
-    second: Third_0
+      213: -7465145407324376345
+    second: evening_drunk_0
+  - first:
+      213: 3061603361572762669
+    second: evening_drunk_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Third_0
+      name: evening_drunk_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 35
         y: 21
-        width: 227
-        height: 227
+        width: 232
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cedae45689c8c97d0800000000000000
-      internalID: -2910296673025610260
+      spriteID: 7e2bac7ddc9766890800000000000000
+      internalID: -7465145407324376345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: evening_drunk_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 260
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24bfa949000d7a20800000000000000
+      internalID: 3061603361572762669
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Third_0: -2910296673025610260
+      evening_drunk_0: -7465145407324376345
+      evening_drunk_1: 3061603361572762669
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

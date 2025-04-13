@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 73eef1359e7cde349bedc33cece48cd5
+guid: 2848d468392c3e6449fc5825fdc81f69
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2910296673025610260
-    second: Third_0
+      213: -7775187589094500490
+    second: evening_brain_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Third_0
+      name: evening_brain_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 21
-        width: 227
-        height: 227
+        x: 28
+        y: 14
+        width: 247
+        height: 273
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cedae45689c8c97d0800000000000000
-      internalID: -2910296673025610260
+      spriteID: 6771ff9151cf81490800000000000000
+      internalID: -7775187589094500490
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Third_0: -2910296673025610260
+      evening_brain_0: -7775187589094500490
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

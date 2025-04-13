@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using ZeroStats.Game.Data.Remote;
 
-namespace ZeroStats.Game.Ui.Stage.Card
+namespace ZeroStats.Game.Ui.Stage.Cards
 {
     public class CardsHand : MonoBehaviour
     {
@@ -10,9 +11,9 @@ namespace ZeroStats.Game.Ui.Stage.Card
         [SerializeField] private RectTransform cardsContainer = default!;
 
         private readonly List<CardView> _cardViews = new();
-        private Action<Data.Remote.Card>? _onSelectedCard;
+        private Action<Card>? _onSelectedCard;
 
-        public void Show(List<Data.Remote.Card> cards, Action<Data.Remote.Card> onSelectCard)
+        public void Show(List<Card> cards, Action<Card> onSelectCard)
         {
             DestroyCards(true);
             _onSelectedCard = onSelectCard;

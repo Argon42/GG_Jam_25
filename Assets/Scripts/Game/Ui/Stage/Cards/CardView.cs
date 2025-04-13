@@ -6,8 +6,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using ZeroStats.Common;
+using ZeroStats.Game.Data.Remote;
 
-namespace ZeroStats.Game.Ui.Stage.Card
+namespace ZeroStats.Game.Ui.Stage.Cards
 {
     public class CardView : MonoBehaviour,
         IPointerEnterHandler, IPointerExitHandler,
@@ -24,7 +25,7 @@ namespace ZeroStats.Game.Ui.Stage.Card
 
         private Coroutine? _enterCoroutine;
 
-        public void Show(Data.Remote.Card card, Func<Vector2> position, Action onSelect)
+        public void Show(Card card, Func<Vector2> position, Action onSelect)
         {
             transform.localPosition = position.Invoke();
             image.sprite = G.LoadSprite(card.IconPath);

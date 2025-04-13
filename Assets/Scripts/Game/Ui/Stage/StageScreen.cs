@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using ZeroStats.Game.Ui.Stage.Card;
+using ZeroStats.Game.Ui.Stage.Cards;
 
 namespace ZeroStats.Game.Ui.Stage
 {

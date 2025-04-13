@@ -32,14 +32,14 @@ namespace ZeroStats.Game.Ui
             _onRestart = onRestart;
 
             var gameResults = G.Config.EngResults
-                .OrderByDescending(s =>s.requiredValues.Length * 100 + Random.Range(0, 100) 
-                )
-                .FirstOrDefault(gameResults => gameResults.requiredStats
+                .OrderBy(s => s.id)
+                .FirstOrDefault(gameResults => 
+                    (gameResults.requiredStats
                     .Zip(gameResults.requiredValues, (type, i) =>
                         results.Any(result =>
                             result.stat == type
                             && ((result.isPositive ? i > 0 : i < 0) || i == 0)))
-                    .All(b => b) && gameResults.minDay <= stage.Day) ?? new EngGameResults
+                    .All(b => b) || gameResults.requiredStats.Length == 0) && gameResults.minDay <= stage.Day) ?? new EngGameResults
             {
                 id = default,
                 text = "Ты умер при странных обстоятельствах",

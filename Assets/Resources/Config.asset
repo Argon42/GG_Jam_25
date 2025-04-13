@@ -15,20 +15,20 @@ MonoBehaviour:
   database:
     cards:
     - Id: 1
-      IconPath: placeholder
+      IconPath: icons/morning_eggs
       Name: "\u041F\u043E\u0436\u0430\u0440\u0438\u0442\u044C \u044F\u0438\u0447\u043D\u0438\u0446\u0443"
       ResultDescription: "\u042F\u0439\u0446\u0430 \u043D\u044B\u0447\u043D\u0435
         \u0434\u043E\u0440\u043E\u0433\u0438\u0435"
       ResultResourcesPath: 
-      Stat1Delta: 4
-      Stat2Delta: 0
-      Stat3Delta: -4
-      Stat4Delta: 0
+      Stat1Delta: -50
+      Stat2Delta: -50
+      Stat3Delta: -50
+      Stat4Delta: -50
       Group: 1
-      AddCardIdInPool: 1
+      AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 2
-      IconPath: placeholder
+      IconPath: icons/morning_coffe
       Name: "\u0427\u0430\u0448\u043A\u0430 \u043A\u043E\u0444\u0435 \u0432 \u041A\u043E\u0444\u0435\u0439\u043D\u0435"
       ResultDescription: "\u0421\u043B\u0438\u0448\u043A\u043E\u043C \u0441\u0438\u043B\u044C\u043D\u043E
         \u043F\u043E\u0442\u0440\u0430\u0442\u0438\u043B\u0438\u0441\u044C"
@@ -38,10 +38,10 @@ MonoBehaviour:
       Stat3Delta: -8
       Stat4Delta: 0
       Group: 0
-      AddCardIdInPool: 1
+      AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 3
-      IconPath: placeholder
+      IconPath: icons/morning_run
       Name: "\u041F\u0440\u043E\u0431\u0435\u0436\u043A\u0430"
       ResultDescription: "\u0418 \u0437\u0430\u0447\u0435\u043C \u0431\u044B\u043B\u043E
         \u0442\u0430\u043A \u0440\u0430\u043D\u043E \u0432\u0441\u0442\u0430\u0432\u0430\u0442\u044C?"
@@ -51,10 +51,10 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-      AddCardIdInPool: 1
+      AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 4
-      IconPath: placeholder
+      IconPath: icons/morning_more
       Name: "\u041F\u043E\u043B\u0435\u0436\u0430\u0442\u044C \u0435\u0449\u0451
         \u043D\u0435\u043C\u043D\u043E\u0433\u043E"
       ResultDescription: "\u041F\u0440\u043E\u0441\u043F\u0430\u043B. \u041E\u043F\u044F\u0442\u044C
@@ -65,10 +65,10 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-      AddCardIdInPool: 1
+      AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 5
-      IconPath: placeholder
+      IconPath: icons/morning_workfast
       Name: "\u0411\u044B\u0441\u0442\u0440\u0435\u0435 \u043D\u0430 \u0440\u0430\u0431\u043E\u0442\u0443!"
       ResultDescription: "\"\u041D\u043E \u043A\u0430\u043A\u043E\u0439 \u0446\u0435\u043D\u043E\u0439?!?!\"
         - \u043F\u043E \u0434\u043E\u0440\u043E\u0433\u0435 \u0442\u044B \u0442\u043E\u0440\u043E\u043F\u0438\u043B\u0441\u044F
@@ -79,10 +79,10 @@ MonoBehaviour:
       Stat3Delta: 0
       Stat4Delta: 0
       Group: 0
-      AddCardIdInPool: 1
+      AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 6
-      IconPath: placeholder
+      IconPath: icons/morning_play
       Name: "\u0421\u044B\u0433\u0440\u0430\u0442\u044C \u043A\u0430\u0442\u043A\u0443
         \u0432 \u0413\u0435\u0440\u043E\u0435\u0432 3"
       ResultDescription: "\u041F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u043B
@@ -93,10 +93,10 @@ MonoBehaviour:
       Stat3Delta: -6
       Stat4Delta: 4
       Group: 0
-      AddCardIdInPool: 1
+      AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 7
-      IconPath: placeholder
+      IconPath: icons/morning_work
       Name: "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u0441\u044F \u043D\u0430
         \u0440\u0430\u0431\u043E\u0442\u0443"
       ResultDescription: "\u0420\u0430\u0431\u043E\u0442\u0430"
@@ -106,10 +106,10 @@ MonoBehaviour:
       Stat3Delta: 10
       Stat4Delta: -10
       Group: 0
-      AddCardIdInPool: 1
+      AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 8
-      IconPath: placeholder
+      IconPath: icons/morning_planing
       Name: "\u0420\u0430\u0441\u043F\u043B\u0430\u043D\u0438\u0440\u043E\u0432\u0430\u0442\u044C
         \u0432\u0435\u0441\u044C \u0434\u0435\u043D\u044C"
       ResultDescription: "\u0412 \u043F\u043B\u0430\u043D\u0430\u0445 \u043E\u043A\u0430\u0437\u0430\u043B\u043E\u0441\u044C
@@ -124,7 +124,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 9
-      IconPath: placeholder
+      IconPath: icons/morning_homeless
       Name: "\u041F\u043E\u0434\u043A\u0438\u043D\u0443\u0442\u044C \u043C\u043E\u043D\u0435\u0442
         \u0431\u0435\u0437\u0434\u043E\u043C\u043D\u043E\u043C\u0443"
       ResultDescription: "\u041D\u0435 \u0440\u0430\u0441\u0447\u0438\u0442\u0430\u043B
@@ -139,7 +139,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 10
-      IconPath: placeholder
+      IconPath: icons/morning_eggs
       Name: "\u042F\u0438\u0447\u043D\u0438\u0446\u0430 \u043F\u043E\u0434\u0433\u043E\u0440\u0435\u043B\u0430"
       ResultDescription: "\u0412 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439
         \u0440\u0430\u0437 \u0442\u043E\u0447\u043D\u043E \u0434\u043E\u0431\u0430\u0432\u043B\u044E
@@ -153,7 +153,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 11
-      IconPath: placeholder
+      IconPath: icons/morning_cycle
       Name: "\u0414\u0435\u043D\u044C \u0441\u0443\u0440\u043A\u0430"
       ResultDescription: "\u042F \u0432 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E\u043C
         \u0446\u0438\u043A\u043B\u0435 \u0441\u043D\u0430 \u0438 \u0440\u0430\u0431\u043E\u0442\u044B"
@@ -166,7 +166,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 12
-      IconPath: placeholder
+      IconPath: icons/morning_shower
       Name: "\u041A\u043E\u043D\u0442\u0440\u0430\u0441\u0442\u043D\u044B\u0439 \u0434\u0443\u0448"
       ResultDescription: "\u042F \u0442\u043E\u0447\u043D\u043E \u043F\u0440\u043E\u0441\u043D\u0443\u043B\u0441\u044F
         \u0438 \u0442\u043E\u0447\u043D\u043E \u0443\u0431\u0435\u0434\u0438\u043B\u0441\u044F
@@ -180,7 +180,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 13
-      IconPath: placeholder
+      IconPath: icons/day_work
       Name: "\u0425\u043E\u0440\u043E\u0448\u043E \u043F\u043E\u0440\u0430\u0431\u043E\u0442\u0430\u0442\u044C"
       ResultDescription: "\u041F\u043E\u0447\u0435\u043C\u0443 \u044F \u0434\u043E\u043B\u0436\u0435\u043D
         \u0434\u0435\u043B\u0430\u0442\u044C \u0447\u0443\u0436\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0438?"
@@ -193,7 +193,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 14
-      IconPath: placeholder
+      IconPath: icons/day_lunch
       Name: "\u0411\u0438\u0437\u043D\u0435\u0441-\u041B\u0430\u043D\u0441"
       ResultDescription: "\u0412\u043A\u0443\u0441\u043D\u043E \u0438 \u0434\u043E\u0440\u043E\u0433\u043E!"
       ResultResourcesPath: 
@@ -205,7 +205,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 15
-      IconPath: placeholder
+      IconPath: icons/day_smoke
       Name: "\u041E\u0431\u0441\u0443\u0436\u0434\u0435\u043D\u0438\u044F \u0432
         \u043A\u0443\u0440\u0438\u043B\u043A\u0435"
       ResultDescription: "\u041A\u043B\u0430\u0441\u0441\u043D\u043E \u043F\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u043B\u0438,
@@ -220,7 +220,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 16
-      IconPath: placeholder
+      IconPath: icons/day_morework
       Name: "\u0414\u043E\u0434\u0435\u043B\u0430\u0442\u044C \u0440\u0430\u0431\u043E\u0442\u0443"
       ResultDescription: "\u041F\u0440\u043E\u0441\u0438\u0434\u0435\u043B \u0432\u0435\u0441\u044C
         \u0432\u0435\u0447\u0435\u0440, \u0437\u0430 \u0442\u043E \u0432\u0441\u0451
@@ -234,7 +234,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 17
-      IconPath: placeholder
+      IconPath: icons/day_ps
       Name: "\u041A\u0443\u043F\u0438\u0442\u044C \u043F\u043B\u0435\u0439\u0441\u0442\u0435\u0439\u0448\u043D"
       ResultDescription: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F \u0432 \u044D\u0442\u043E\u043C
         \u043C\u0435\u0441\u044F\u0446\u0435 \u044F \u0431\u043E\u043B\u044C\u0448\u0435
@@ -249,7 +249,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 18
-      IconPath: placeholder
+      IconPath: icons/day_rain
       Name: "\u0414\u043E\u0436\u0434\u044C"
       ResultDescription: "\u041F\u0440\u0438\u0448\u043B\u043E\u0441\u044C \u0432\u044B\u0437\u0432\u0430\u0442\u044C
         \u0442\u0430\u043A\u0441\u0438"
@@ -262,7 +262,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 19
-      IconPath: placeholder
+      IconPath: icons/day_norain
       Name: "\u041F\u043E\u0439\u0442\u0438 \u043F\u0435\u0448\u043A\u043E\u043C
         \u043F\u043E\u0434 \u0434\u043E\u0436\u0434\u0451\u043C"
       ResultDescription: "\u041F\u0440\u043E\u043C\u043E\u043A \u0434\u043E \u0442\u0440\u0443\u0441\u043E\u0432"
@@ -275,7 +275,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 20
-      IconPath: placeholder
+      IconPath: icons/day_later
       Name: "\u041E\u0442\u043B\u043E\u0436\u0438\u0442\u044C \u0432\u0441\u0435
         \u0434\u0435\u043B\u0430 \u043D\u0430 \u0432\u0435\u0447\u0435\u0440"
       ResultDescription: "\u041E\u0442\u0434\u043E\u0445\u043D\u0443 \u0438 \u0437\u0430
@@ -289,7 +289,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 21
-      IconPath: placeholder
+      IconPath: icons/day_learn
       Name: "\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435
         \u043A\u0443\u0440\u0441\u044B"
       ResultDescription: "\u041D\u043E\u0432\u043E\u0435 \u043D\u0435 \u0432\u0441\u0435\u0433\u0434\u0430
@@ -303,7 +303,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 22
-      IconPath: placeholder
+      IconPath: icons/evening_tv
       Name: "\u0417\u0430\u043B\u0438\u043F\u043D\u0443\u0442\u044C \u0432 \u0441\u0435\u0440\u0438\u0430\u043B"
       ResultDescription: "\u041D\u0435 \u0437\u0440\u044F \u043F\u043E\u0442\u0440\u0430\u0442\u0438\u043B\u0441\u044F
         \u043D\u0430 \u043D\u0435\u0442\u0444\u043B\u0438\u043A\u0441 \u0432 \u044D\u0442\u043E\u043C
@@ -317,7 +317,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 23
-      IconPath: placeholder
+      IconPath: icons/evening_sale
       Name: "\u0412 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0435 \u0442\u043E\u0432\u0430\u0440\u044B
         \u043F\u043E \u0430\u043A\u0446\u0438\u0438"
       ResultDescription: "\u042D\u0442\u043E \u0442\u043E\u0447\u043D\u043E \u043C\u043D\u0435
@@ -332,7 +332,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 24
-      IconPath: placeholder
+      IconPath: icons/evening_noeat
       Name: "\u041D\u0435 \u0435\u0441\u0442\u044C \u043F\u043E\u0441\u043B\u0435
         \u0448\u0435\u0441\u0442\u0438"
       ResultDescription: "\u0412\u0441\u0435\u0433\u0434\u0430 \u043D\u0443\u0436\u043D\u043E
@@ -347,7 +347,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 25
-      IconPath: placeholder
+      IconPath: icons/evening_mined
       Name: "\u0420\u0430\u0437\u043C\u044B\u0448\u043B\u044F\u0442\u044C \u043E
         \u0432\u0435\u0447\u043D\u043E\u043C"
       ResultDescription: "\u041C\u0430\u043A\u0430\u0440\u043E\u043D\u044B \u0441
@@ -362,7 +362,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 26
-      IconPath: placeholder
+      IconPath: icons/evening_play
       Name: "\u0420\u0443\u0431\u0438\u0442\u044C\u0441\u044F \u0432 \u043F\u043B\u043E\u0439\u043A\u0443"
       ResultDescription: "\u042F \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E
         \u043F\u0440\u043E\u0439\u0434\u0443 \u044D\u0442\u043E\u0442 \u0443\u0440\u043E\u0432\u0435\u043D\u044C!"
@@ -375,7 +375,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 27
-      IconPath: placeholder
+      IconPath: icons/evening_drunk
       Name: "\u041D\u0430\u043F\u0438\u0442\u044C\u0441\u044F"
       ResultDescription: "\u0412 \u044D\u0442\u043E\u043C \u0431\u0430\u0440\u0435
         \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0434\u0451\u0448\u0435\u0432\u043E,
@@ -390,7 +390,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 28
-      IconPath: placeholder
+      IconPath: icons/evening_beer
       Name: "\u041F\u043E \u043F\u0438\u0432\u043A\u0443"
       ResultDescription: "\u0412\u0435\u0447\u0435\u0440 \u0434\u043E\u043B\u0436\u0435\u043D
         \u0431\u044B\u0442\u044C \u043F\u0440\u0438\u044F\u0442\u043D\u044B\u043C"
@@ -403,7 +403,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 29
-      IconPath: placeholder
+      IconPath: icons/evening_brain
       Name: "\u0414\u043E\u043C\u0430 \u043F\u0438\u043B\u044F\u0442 \u043C\u043E\u0437\u0433"
       ResultDescription: "\u041B\u0443\u0447\u0448\u0435 \u0431\u044B \u043F\u043E\u0448\u0451\u043B
         \u0441 \u0434\u0440\u0443\u0437\u044C\u044F\u043C\u0438 \u043F\u043E \u0431\u0430\u0440\u0430\u043C"
@@ -416,7 +416,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 30
-      IconPath: placeholder
+      IconPath: icons/evening_income
       Name: "\u0412\u043D\u0435\u0437\u0430\u043F\u043D\u044B\u0435 \u0433\u043E\u0441\u0442\u0438"
       ResultDescription: "\u041E, \u043A\u0430\u043A \u044F \u0432\u0430\u0441 \u0436\u0434\u0430\u043B"
       ResultResourcesPath: 
@@ -428,7 +428,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 31
-      IconPath: placeholder
+      IconPath: icons/evening_fu
       Name: "\u041D\u0435 \u0441\u0432\u0435\u0436\u0430\u044F \u0435\u0434\u0430"
       ResultDescription: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F \u044D\u0442\u043E
         \u043D\u0443\u0436\u043D\u043E \u0431\u044B\u043B\u043E \u0432\u044B\u0431\u0440\u043E\u0441\u0438\u0442\u044C
@@ -443,7 +443,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 32
-      IconPath: placeholder
+      IconPath: icons/night_more
       Name: "\u041F\u0440\u043E\u0441\u043F\u0430\u0442\u044C \u0434\u043E \u043E\u0431\u0435\u0434\u0430"
       ResultDescription: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F \u044F \u043E\u043F\u043E\u0437\u0434\u0430\u044E,
         \u0434\u0430 \u0438 \u0444\u0438\u0433 \u0441 \u043D\u0438\u043C, \u0431\u0438\u043B\u0435\u0442
@@ -459,7 +459,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 33
-      IconPath: placeholder
+      IconPath: icons/night_sleep
       Name: "\u0421\u043F\u0430\u0442\u044C "
       ResultDescription: "\u041D\u0435\u0442 \u043D\u0438\u0447\u0435\u0433\u043E
         \u0440\u0430\u0434\u043E\u0441\u0442\u043D\u0435\u0435, \u0447\u0435\u043C
@@ -473,7 +473,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 34
-      IconPath: placeholder
+      IconPath: icons/night_sounds
       Name: "\u0428\u0443\u043C\u043D\u044B\u0435 \u0441\u043E\u0441\u0435\u0434\u0438"
       ResultDescription: "\u041E, \u043A\u0430\u043A \u0436\u0435 \u044F \u0432\u0430\u043C
         \u043E\u0442\u043E\u043C\u0449\u0443, \u0432\u044B \u043D\u0435 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442\u0435"
@@ -486,7 +486,7 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 35
-      IconPath: placeholder
+      IconPath: icons/night_alarm
       Name: "\u041F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C, \u0447\u0442\u043E
         \u0448\u0443\u043C\u0438\u0442 \u043D\u0430 \u0443\u043B\u0438\u0446\u0435"
       ResultDescription: "\u041E\u043F\u044F\u0442\u044C \u0441\u043E\u0441\u0435\u0434\u0441\u043A\u0430\u044F
@@ -501,38 +501,38 @@ MonoBehaviour:
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 36
-      IconPath: placeholder
+      IconPath: icons/night_clock
       Name: "\u0417\u0430\u0432\u0435\u0441\u0442\u0438 \u0431\u0443\u0434\u0438\u043B\u044C\u043D\u0438\u043A
         \u0440\u0430\u043D\u044C\u0448\u0435"
       ResultDescription: "\u0420\u0430\u043D\u044C\u0448\u0435 \u043F\u0440\u043E\u0441\u043D\u0443\u0441\u044C,
         \u0441\u0434\u0435\u043B\u0430\u044E \u0431\u043E\u043B\u044C\u0448\u0435
         \u0434\u0435\u043B"
       ResultResourcesPath: 
-      Stat1Delta: 5
-      Stat2Delta: 5
-      Stat3Delta: 5
-      Stat4Delta: 5
+      Stat1Delta: 0
+      Stat2Delta: -6
+      Stat3Delta: 0
+      Stat4Delta: 0
       Group: 0
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     - Id: 37
-      IconPath: placeholder
+      IconPath: icons/night_nosleep
       Name: "\u0417\u0430\u0441\u0438\u0434\u0435\u043B\u0441\u044F \u0434\u043E
         \u0443\u0442\u0440\u0430"
       ResultDescription: "\u042D\u0442\u043E \u0431\u0435\u0441\u0441\u043E\u043D\u0438\u0446\u0430
         \u043C\u0435\u043D\u044F \u043A\u043E\u0433\u0434\u0430-\u043D\u0438\u0431\u0443\u0434\u044C
         \u0434\u043E\u0432\u0435\u0434\u0451\u0442"
       ResultResourcesPath: 
-      Stat1Delta: 5
-      Stat2Delta: 5
-      Stat3Delta: 5
-      Stat4Delta: 5
+      Stat1Delta: -3
+      Stat2Delta: -3
+      Stat3Delta: 0
+      Stat4Delta: 0
       Group: 0
       AddCardIdInPool: 0
       StageDelayForAddToPool: 0
     cardDescriptors:
     - CardId: 1
-      Weight: 5000
+      Weight: 500000
       NotApplicableStages: 030000000400000005000000
       StatNumber: -1
       MinStatForUse: -20
@@ -771,3 +771,68 @@ MonoBehaviour:
       values:
       - 20.000000
       - 3.000000
+    engResults:
+    - id: 1
+      text: "\u0412\u044B \u0431\u044B\u043B\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+        \u0437\u0434\u043E\u0440\u043E\u0432\u044B \u0438 \u0443\u043C\u0435\u0440\u043B\u0438"
+      iconPath: icons/end_health_up
+      requiredStats: 01000000
+      requiredValues: 01000000
+      minDay: 0
+    - id: 2
+      text: "\u0412\u044B \u0431\u044B\u043B\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+        \u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432\u044B \u0438 \u0443\u043C\u0435\u0440\u043B\u0438"
+      iconPath: icons/end_happy_up
+      requiredStats: 02000000
+      requiredValues: 01000000
+      minDay: 0
+    - id: 3
+      text: "\u0412\u044B \u0431\u044B\u043B\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+        \u0431\u043E\u0433\u0430\u0442\u044B \u0438 \u0443\u043C\u0435\u0440\u043B\u0438"
+      iconPath: icons/end_money_up
+      requiredStats: 03000000
+      requiredValues: 01000000
+      minDay: 0
+    - id: 4
+      text: "\u0412\u044B \u0431\u044B\u043B\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+        \u043E\u0431\u0449\u0438\u0442\u0435\u043B\u044C\u043D\u044B \u0438 \u0443\u043C\u0435\u0440\u043B\u0438"
+      iconPath: icons/end_social_up
+      requiredStats: 04000000
+      requiredValues: 01000000
+      minDay: 0
+    - id: 5
+      text: "\u0412\u044B \u0431\u044B\u043B\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+        \u043D\u0435 \u0437\u0434\u043E\u0440\u043E\u0432\u044B \u0438 \u0443\u043C\u0435\u0440\u043B\u0438"
+      iconPath: icons/end_health_down
+      requiredStats: 01000000
+      requiredValues: ffffffff
+      minDay: 0
+    - id: 6
+      text: "\u0412\u044B \u0431\u044B\u043B\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+        \u043D\u0435 \u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432\u044B \u0438
+        \u0443\u043C\u0435\u0440\u043B\u0438"
+      iconPath: icons/end_happy_down
+      requiredStats: 02000000
+      requiredValues: ffffffff
+      minDay: 0
+    - id: 7
+      text: "\u0412\u044B \u0431\u044B\u043B\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+        \u043D\u0435 \u0431\u043E\u0433\u0430\u0442\u044B \u0438 \u0443\u043C\u0435\u0440\u043B\u0438"
+      iconPath: icons/end_money_down
+      requiredStats: 03000000
+      requiredValues: ffffffff
+      minDay: 0
+    - id: 8
+      text: "\u0412\u044B \u0431\u044B\u043B\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C
+        \u043D\u0435 \u043E\u0431\u0449\u0438\u0442\u0435\u043B\u044C\u043D\u044B
+        \u0438 \u0443\u043C\u0435\u0440\u043B\u0438"
+      iconPath: icons/end_social_down\
+      requiredStats: 04000000
+      requiredValues: ffffffff
+      minDay: 0
+    - id: 9
+      text: "\u0422\u042B \u0411\u042B\u041B \u0416\u0410\u041B\u041E\u041A"
+      iconPath: placeholder
+      requiredStats: 01000000020000000300000004000000
+      requiredValues: ffffffffffffffffffffffffffffffff
+      minDay: 0

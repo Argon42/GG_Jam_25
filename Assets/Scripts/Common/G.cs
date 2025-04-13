@@ -26,5 +26,9 @@ namespace ZeroStats.Common
         public static int Milliseconds(this AnimationClip clip) => (int)(clip.length * 1000);
 
         public static Color LoadColor(string path) => Config.GetColor(path);
+
+        public static bool KnowCard(int cardId) => PlayerPrefs.GetInt($"KnownCards/{cardId}", 0) != 0;
+
+        public static void SetKnownCard(int cardId) => PlayerPrefs.SetInt($"KnownCards/{cardId}", 1);
     }
 }

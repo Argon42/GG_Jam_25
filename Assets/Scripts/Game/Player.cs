@@ -41,6 +41,8 @@ namespace ZeroStats.Game
                     .AdditionalCards
                     .Add(G.Config.GetCard(card.AddCardIdInPool));
             }
+            
+            G.SetKnownCard(card.Id);
         }
 
         private StageState GetStage(int offset)

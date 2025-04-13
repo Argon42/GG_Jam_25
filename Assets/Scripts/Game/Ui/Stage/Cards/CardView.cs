@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using ZeroStats.Common;
+using ZeroStats.Game.Data.Enums;
 using ZeroStats.Game.Data.Remote;
 
 namespace ZeroStats.Game.Ui.Stage.Cards
@@ -34,6 +35,27 @@ namespace ZeroStats.Game.Ui.Stage.Cards
             var color = glow.color;
             color.a = 0f;
             glow.color = color;
+
+            CreateDeltaEffectView(card);
+        }
+
+        private void CreateDeltaEffectView(Card card)
+        {
+            if (card.Stat1Delta != 0)
+                Instantiate(deltaEffectViewPrefab, deltaEffectContainer)
+                    .Show(card.Stat1Delta, StatType.First, G.KnowCard(card.Id));
+
+            if (card.Stat2Delta != 0)
+                Instantiate(deltaEffectViewPrefab, deltaEffectContainer)
+                    .Show(card.Stat2Delta, StatType.Second, G.KnowCard(card.Id));
+
+            if (card.Stat3Delta != 0)
+                Instantiate(deltaEffectViewPrefab, deltaEffectContainer)
+                    .Show(card.Stat3Delta, StatType.Third, G.KnowCard(card.Id));
+
+            if (card.Stat4Delta != 0)
+                Instantiate(deltaEffectViewPrefab, deltaEffectContainer)
+                    .Show(card.Stat4Delta, StatType.Fourth, G.KnowCard(card.Id));
         }
 
         public void Hide(Action onEnd)

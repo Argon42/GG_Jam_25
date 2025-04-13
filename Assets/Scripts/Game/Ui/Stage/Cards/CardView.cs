@@ -23,6 +23,7 @@ namespace ZeroStats.Game.Ui.Stage.Cards
         [SerializeField] private float angle = 10;
         [SerializeField] private float speed = 5f;
         [SerializeField] private Image glow = default!;
+        [SerializeField] private AnimationSoundEventHandler audioSource = default!;
 
         private Coroutine? _enterCoroutine;
 
@@ -122,6 +123,7 @@ namespace ZeroStats.Game.Ui.Stage.Cards
 
         private void StartGlow()
         {
+            audioSource.PlaySound();
             glowTween?.Kill();
 
             Color c = glow.color;

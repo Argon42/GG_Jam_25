@@ -149,6 +149,8 @@ MonoBehaviour:
   button: {fileID: 396387518321085812}
   deltaEffectViewPrefab: {fileID: 7663150926464379097, guid: 62d9a0950ec152448a543133bbe83b90, type: 3}
   deltaEffectContainer: {fileID: 5845074276144361247}
+  angle: 5
+  speed: 3
 --- !u!114 &396387518321085812
 MonoBehaviour:
   m_ObjectHideFlags: 0

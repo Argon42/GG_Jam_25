@@ -26,6 +26,7 @@ namespace ZeroStats.Game
             startGameScreen.Show(() => StartGame(() => startGameScreen.Hide()).Forget());
             backgroundWorld.Show(GameStage.StartGame);
             player.StartNewGame();
+            Cursor.visible = false;
         }
 
         private async UniTaskVoid StartGame(Action hideAction)

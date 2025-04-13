@@ -48,7 +48,7 @@ namespace ZeroStats.Game
             {
                 stageScreen.Hide();
                 backgroundWorld.Show(GameStage.Result);
-                resultScreen.Show(OnRestart, stats);
+                resultScreen.Show(OnRestart, stats, player.CurrentStage.Value);
                 return;
             }
 

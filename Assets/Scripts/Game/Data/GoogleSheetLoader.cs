@@ -40,6 +40,7 @@ namespace ZeroStats.Game.Data
                 (await FetchData("Parameters", ParseParameters)).ToDictionary(tuple => tuple.Item1,
                     tuple => tuple.Item2)
             ),
+            engResults = await FetchData("Results", EngGameResults.Parse),
         };
 
         private static Card ParseCard(string?[] cells) => new()
@@ -124,7 +125,7 @@ namespace ZeroStats.Game.Data
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine(e + "\n " + string.Join("|", cells.Select(c => c.v)));
+                        Debug.Log(e + "\n " + string.Join("|", cells.Select(c => c.v)));
                         throw;
                     }
                 });

@@ -12,6 +12,7 @@ namespace ZeroStats.Game.Data
         [SerializeField] private CardDatabase database = default!;
 
         public IReadOnlyList<CardDescriptor> Descriptors => database.cardDescriptors;
+        public IReadOnlyList<EngGameResults> EngResults => database.engResults;
 
         public Card GetCard(int id) => database.cards.First(card => card.Id == id);
         public int GetInt(string paramName) => database.parameters.GetInt(paramName);

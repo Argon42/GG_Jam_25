@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ZeroStats.Game.Data.Remote
 {
@@ -9,5 +10,6 @@ namespace ZeroStats.Game.Data.Remote
         public CardDescriptor[] cardDescriptors = default!;
         public ColorData[] colors = default!;
         public ParametersData parameters = default!;
+        public EngGameResults[] engResults = default!;
     }
 }

@@ -8,6 +8,7 @@ namespace ZeroStats.Game.Data
     public interface IGameConfig
     {
         IReadOnlyList<CardDescriptor> Descriptors { get; }
+        IReadOnlyList<EngGameResults> EngResults { get; }
         Card GetCard(int id);
         int GetInt(string paramName);
         float GetFloat(string paramName);

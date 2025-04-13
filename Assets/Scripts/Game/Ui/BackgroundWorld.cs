@@ -2,6 +2,7 @@ using ZeroStats.Game.Data.Enums;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace ZeroStats.Game.Ui
 {

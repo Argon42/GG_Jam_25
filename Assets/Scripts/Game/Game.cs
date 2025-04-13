@@ -56,7 +56,7 @@ namespace ZeroStats.Game
             await stagePreloaderScreen.Show(stageState, () =>
             {
                 stageScreen.Show(player.GetCards(stageState), card => OnSelectCard(card).Forget());
-                backgroundWorld.Show(GameStage.Day);
+                backgroundWorld.Show(stageState.Current);
             });
         }
 

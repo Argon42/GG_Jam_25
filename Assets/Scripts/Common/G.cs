@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 using ZeroStats.Game;
+using ZeroStats.Game.Data;
+using ZeroStats.Game.Data.Enums;
 
 namespace ZeroStats.Common
 {

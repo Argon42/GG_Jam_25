@@ -4,6 +4,9 @@ using System.Linq;
 using R3;
 using UnityEngine;
 using ZeroStats.Common;
+using ZeroStats.Game.Data;
+using ZeroStats.Game.Data.Enums;
+using ZeroStats.Game.Data.Remote;
 
 namespace ZeroStats.Game
 {

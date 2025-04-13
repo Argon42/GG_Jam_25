@@ -20,7 +20,7 @@ namespace ZeroStats.Game.Ui.Stage.Stats
         {
             _subscription?.Dispose();
 
-            icon.sprite = G.LoadSprite($"Icons/{type.ToString()}");
+            G.LoadSprite($"Icons/{type.ToString()}", sprite => icon.sprite = sprite).Forget();
             leftBar.color = G.LoadColor($"ColorsBars/{type.ToString()}");
             rightBar.color = G.LoadColor($"ColorsBars/{type.ToString()}");
 

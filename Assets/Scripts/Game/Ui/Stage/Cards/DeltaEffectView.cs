@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using ZeroStats.Common;
@@ -15,11 +17,11 @@ namespace ZeroStats.Game.Ui.Stage.Cards
         public void Show(int delta, StatType stat, bool knowCard)
         {
             gameObject.SetActive(true);
-
-            icon.sprite = G.LoadSprite($"Icons/{stat.ToString()}");
-
-            icon.color = icon.sprite == null 
-                ? G.LoadColor($"ColorsBars/{stat.ToString()}") 
+            G.LoadSprite($"Icons/{stat.ToString()}",
+                    sprite => icon.sprite = sprite)
+                .Forget();
+            icon.color = icon.sprite == null
+                ? G.LoadColor($"ColorsBars/{stat.ToString()}")
                 : Color.white;
 
             if (!knowCard)

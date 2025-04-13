@@ -26,7 +26,7 @@ MonoBehaviour:
       Stat4Delta: 0
       Group: 1
       AddCardIdInPool: 1
-      StageDelayForAddToPool: 2
+      StageDelayForAddToPool: 0
     - Id: 2
       IconPath: placeholder
       Name: "\u0427\u0430\u0448\u043A\u0430 \u043A\u043E\u0444\u0435 \u0432 \u041A\u043E\u0444\u0435\u0439\u043D\u0435"
@@ -532,7 +532,7 @@ MonoBehaviour:
       StageDelayForAddToPool: 0
     cardDescriptors:
     - CardId: 1
-      Weight: 50
+      Weight: 5000
       NotApplicableStages: 030000000400000005000000
       StatNumber: -1
       MinStatForUse: -20

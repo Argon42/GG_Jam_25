@@ -29,7 +29,7 @@ namespace ZeroStats.Game.Ui.Stage.Cards
         public void Show(Card card, Func<Vector2> position, Action onSelect)
         {
             transform.localPosition = position.Invoke();
-            image.sprite = G.LoadSprite(card.IconPath);
+            G.LoadSprite(card.IconPath, sprite => image.sprite = sprite).Forget();
             text.text = G.Localize(card.Name);
             button.onClick.AddListener(onSelect.Invoke);
             var color = glow.color;

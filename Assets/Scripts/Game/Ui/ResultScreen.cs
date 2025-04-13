@@ -32,7 +32,7 @@ namespace ZeroStats.Game.Ui
             _onRestart = onRestart;
 
             var gameResults = G.Config.EngResults
-                .OrderBy(_ => Random.value
+                .OrderByDescending(s =>s.requiredValues.Length * 100 + Random.Range(0, 100) 
                 )
                 .FirstOrDefault(gameResults => gameResults.requiredStats
                     .Zip(gameResults.requiredValues, (type, i) =>

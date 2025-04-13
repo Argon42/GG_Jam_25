@@ -22,7 +22,7 @@ namespace ZeroStats.Common
 
         public static async UniTaskVoid LoadSprite(string path, Action<Sprite> callback)
         {
-            var sprite = await ResourcesProvider.LoadSprite(path);
+            var sprite = await ResourcesProvider.LoadSprite(path) ?? Resources.Load<Sprite>("placeholder");
             callback(sprite);
         }
 

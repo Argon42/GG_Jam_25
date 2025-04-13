@@ -17,7 +17,7 @@ namespace ZeroStats.Game.Ui.Stage.Cards
         public void Show(int delta, StatType stat, bool knowCard)
         {
             gameObject.SetActive(true);
-            G.LoadSprite($"Icons/{stat.ToString()}",
+            G.LoadSprite($"icons/{stat.ToString()}",
                     sprite => icon.sprite = sprite)
                 .Forget();
             icon.color = icon.sprite == null

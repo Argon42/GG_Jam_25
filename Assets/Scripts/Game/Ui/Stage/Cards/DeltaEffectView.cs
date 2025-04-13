@@ -35,14 +35,17 @@ namespace ZeroStats.Game.Ui.Stage.Cards
                 case > 0:
                     upStat.SetActive(true);
                     downStat.SetActive(false);
+                    unknownStat.SetActive(false);
                     return;
                 case < 0:
                     upStat.SetActive(false);
                     downStat.SetActive(true);
+                    unknownStat.SetActive(false);
                     return;
                 default:
                     upStat.SetActive(false);
                     downStat.SetActive(false);
+                    unknownStat.SetActive(true);
                     Debug.LogError("delta == 0, stat: " + stat);
                     return;
             }

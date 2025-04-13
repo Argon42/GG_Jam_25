@@ -25,7 +25,7 @@ namespace ZeroStats.Game.Data
         /// <summary>
         /// Обновить базу данных с помощью форматированной ссылки с 1 аргументом для таблицы
         /// </summary>
-        public async UniTaskVoid GenerateParametersFromUrl(string urlFormat) =>
+        public async UniTask GenerateParametersFromUrl(string urlFormat) =>
             database = await new GoogleSheetLoader(arg => string.Format(urlFormat, arg)).LoadAllData();
     }
 }

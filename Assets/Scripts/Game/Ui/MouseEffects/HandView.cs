@@ -10,6 +10,7 @@ namespace ZeroStats.Game.Ui.MouseEffects
         [SerializeField] private RectTransform hand = default!;
         [SerializeField] private float shadowOffset = 100;
         [SerializeField] private float angleOfClick = 0.3f;
+        [SerializeField] private AudioSource audioSource = default!;
         private Vector3 _startHandPosition;
 
         public RectTransform PointTransform => pointPivot;
@@ -19,6 +20,13 @@ namespace ZeroStats.Game.Ui.MouseEffects
         private void Update()
         {
             shadow.position = pointPivot.position - Vector3.down * shadowOffset;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                audioSource.pitch = Random.Range(0.9f, 1.1f);
+                audioSource.Play();
+            }
+            
             if (Input.GetMouseButton(0))
             {
                 var dir1 = (endPivot.position - pointPivot.position).normalized;

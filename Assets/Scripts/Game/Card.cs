@@ -2,7 +2,6 @@
 
 namespace ZeroStats.Game
 {
-    
     [Serializable]
     public class Card
     {
@@ -17,5 +16,8 @@ namespace ZeroStats.Game
         public int Stat3Delta;
         public int Stat4Delta;
         public int Group;
+
+        public int AddCardIdInPool;
+        public int StageDelayForAddToPool;
     }
 }

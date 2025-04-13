@@ -76,6 +76,8 @@ namespace ZeroStats.Game
             Stat3Delta = ParseInt(cells[7]),
             Stat4Delta = ParseInt(cells[8]),
             Group = ParseInt(cells[9]),
+            AddCardIdInPool = ParseInt(cells[10]),
+            StageDelayForAddToPool = ParseInt(cells[11]),
         };
 
         private static CardDescriptor ParseDescription(string?[] cells) => new()
